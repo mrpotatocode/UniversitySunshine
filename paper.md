@@ -2,6 +2,7 @@ The Wage Gap Persists: How pay imbalances by gender unequally reward
 male professors at the University of Toronto
 ================
 Thomas Rosenthal
+
 March 1, 2021
 
 ## Introduction
@@ -73,20 +74,435 @@ raw_data %>% mutate(SalaryPaid = parse_number(`Salary Paid`), .after = "Salary P
 ```
 
 ``` r
-head(raw_data)
+kable(head(raw_data))
 ```
 
-    ## # A tibble: 6 x 9
-    ##   Sector `Last Name` `First Name` `Salary Paid` `Taxable Benefi… Employer
-    ##   <chr>  <chr>       <chr>        <chr>         <chr>            <chr>   
-    ## 1 Gover… Almond      Margot       $123,153.63   $204.96          Aborigi…
-    ## 2 Gover… Aniol       Richard      $102,860.59   $173.98          Aborigi…
-    ## 3 Gover… Bennett     Phyllis      $114,399.48   $189.54          Aborigi…
-    ## 4 Gover… Bird        Anne         $103,033.91   $176.37          Aborigi…
-    ## 5 Gover… Bliss       Rose         $102,045.84   $175.66          Aborigi…
-    ## 6 Gover… Carr        Douglas      $185,661.92   $298.74          Aborigi…
-    ## # … with 3 more variables: `Job Title` <chr>, `Calendar Year` <dbl>,
-    ## #   Filename <chr>
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Sector
+
+</th>
+
+<th style="text-align:left;">
+
+Last Name
+
+</th>
+
+<th style="text-align:left;">
+
+First Name
+
+</th>
+
+<th style="text-align:left;">
+
+Salary Paid
+
+</th>
+
+<th style="text-align:left;">
+
+Taxable Benefits
+
+</th>
+
+<th style="text-align:left;">
+
+Employer
+
+</th>
+
+<th style="text-align:left;">
+
+Job Title
+
+</th>
+
+<th style="text-align:right;">
+
+Calendar Year
+
+</th>
+
+<th style="text-align:left;">
+
+Filename
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Almond
+
+</td>
+
+<td style="text-align:left;">
+
+Margot
+
+</td>
+
+<td style="text-align:left;">
+
+$123,153.63
+
+</td>
+
+<td style="text-align:left;">
+
+$204.96
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Director, Corporate Management / Directrice, gestion ministérielle
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Aniol
+
+</td>
+
+<td style="text-align:left;">
+
+Richard
+
+</td>
+
+<td style="text-align:left;">
+
+$102,860.59
+
+</td>
+
+<td style="text-align:left;">
+
+$173.98
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Senior Negotiator / Négociateur principal
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Bennett
+
+</td>
+
+<td style="text-align:left;">
+
+Phyllis
+
+</td>
+
+<td style="text-align:left;">
+
+$114,399.48
+
+</td>
+
+<td style="text-align:left;">
+
+$189.54
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Manager, Issues Management and Media Relations / Chef, gestions des
+questions d’intérêt et relations avec les m?dias
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Bird
+
+</td>
+
+<td style="text-align:left;">
+
+Anne
+
+</td>
+
+<td style="text-align:left;">
+
+$103,033.91
+
+</td>
+
+<td style="text-align:left;">
+
+$176.37
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Team Lead / Chef d’équipe
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Bliss
+
+</td>
+
+<td style="text-align:left;">
+
+Rose
+
+</td>
+
+<td style="text-align:left;">
+
+$102,045.84
+
+</td>
+
+<td style="text-align:left;">
+
+$175.66
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Manager, Performance Measures and Data / Chef, mesures et données de
+rendement
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Government of Ontario - Ministries
+
+</td>
+
+<td style="text-align:left;">
+
+Carr
+
+</td>
+
+<td style="text-align:left;">
+
+Douglas
+
+</td>
+
+<td style="text-align:left;">
+
+$185,661.92
+
+</td>
+
+<td style="text-align:left;">
+
+$298.74
+
+</td>
+
+<td style="text-align:left;">
+
+Aboriginal Affairs
+
+</td>
+
+<td style="text-align:left;">
+
+Assistant Deputy Minister, Negotiations and Reconciliation /
+Sous-ministre adjoint, négociations et réconciliation
+
+</td>
+
+<td style="text-align:right;">
+
+2014
+
+</td>
+
+<td style="text-align:left;">
+
+/Users/thomas/Documents/Second Year/Winter Term/Ethics in
+DS/Sunshine\_List/data/2014-pssd-full-compendium-utf8-en.csv
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 ``` r
 UofT <- raw_data %>% filter(Employer %in% c('University of Toronto','University Of Toronto')) %>% 
