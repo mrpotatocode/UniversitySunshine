@@ -1,5 +1,4 @@
-The Wage Gap Persists: How pay imbalances by gender unequally reward
-male professors at the University of Toronto
+The Wage Gap Persists: How pay imbalances by gender unequally reward male professors at the University of Toronto
 ================
 Thomas Rosenthal
 
