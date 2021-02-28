@@ -24,80 +24,9 @@ abstract: In this work, a binomial Baseyian analysis releaves the persistance of
   this wage gap is increasingly worse year over year.
 urlcolor: blue
 ---
-
 \vspace{-5truemm}
 
-## Introduction
-
-\vspace{-2truemm}
-
-Anintro...
-
-\vspace{-4truemm}
-
-## Data
-
-\vspace{-2truemm}
-
-brief..
-
-\vspace{-4truemm}
-
-### Dataset
-
-\vspace{-2truemm}
-
-Ontario makes available public sector salary disclosure from 1996 to 2019 (or most current year) avialable through the Open Data Ontario portal, or for each year as .csv file from [ontario.ca/page/public-sector-salary-disclosure](https://www.ontario.ca/page/public-sector-salary-disclosure).
-
-Using 
-
-
-\vspace{-4truemm}
-
-### Gender Encoding Process
-
-Ontario does not specify "gender" in public sector salary disclosures. As such, gender columns are calculated using the `gender` package [@citegender] and its underlying dataset built from US Census and Social Security data. The package assigns a male/female label based on the frequency of male to female names (whichever is more frequent) within a specified time period (in this case, 1932 to 2012, the most recent period, as it can be safely assumed that nearly all working professionals will be born within this range). In cases where a name is not present, no gender is assigned.
-
-There are 4215 distinct first names for University of Toronto staff between 2012 and 2019. At first pass, the package sucessfully assigned 2652 first names (63%). Among the unmatched, a highly frequent cause of non-matches was persons with two first names listed (e.g. Charles James). These were split and 837 (53% of unmatched, 20% of total, bringing matched names to 83%) were rematched successfully. Priority was given to the first of these two names (i.e. Charles), but some were matched on the second of these names (i.e. James). The latter was especially useful for names which had been abbreviated (e.g. C. James). Similarly, some unmatched names were two first names. An additional 90 were matched in the same mechnanism. Of remaining unmatched names, a small number (15) were matched on alternative names listed in parentheses. In total 3604 names were matched (86%). The remaining 14% were left as "NA" as are noted throughout the analysis. 
-
-This process leaves much to be desired. See §Ethical Considerations for further discussion and the approach's ramifications.
-
-\vspace{-2truemm}
-
-### Ethical Considerations 
-
-References to "gender" within this paper should be viewed with skepticism. These references are binary, presumptive, declarative without recourse, and are much closer in definition to "sex assigned at birth" than gender identity or expression. Current gender theory treats gender as a spectrum with nuance far beyond the capabilities of models presented here. Analytical and model-based research that uses gender as a primary motivator to answer research questions should 
-
-The `gender` package [@citegender] explicitly references several crucial ethical concerns with its use. Firstly, the use of this package should be used in aggregate. The University of Toronto ranges from 2854 (2012) to 4342 (2019) employees, which should sufficiently qu
-
-Blevins & Mullen exemplify the "Leslie Problem" 
-
-In addition to not having year of birth, we 
-
-
-
-This approach is certain to misgender individuals (Mihaljević et al 2019) 
-
-Even when limited to a binary approach, misgendering occurs. An examination of names of high ambiguity such as "Jan" demonstrates the issue; three professors teaching within 2012-2019 are gendered as "female" but manual review of faculty profiles suggest two of these three are much more likely to be "male". Even if provided with birth years, these are likely to be unresolved (Jan becomes equally male:female between 1975 and 1980, before coming considerably more male by 2000.) The rate at which this occurs across the entire dataset is unknown. 
-
-"Jan" varies greatly in gender frequency by cultural origin. In the Netherlands, Catalonia, and Norway the name has been one of the most popular (if not most popular) "male" first names. The `gender` package [@citegender] by contrast, is based solely on US data, where Jan popularity and encoding has varied. As such, the encoding process erases any cultural nuance, even when it might be otherwise interpretable by last names. 
-
-Worse yet, this US data filter outright excludes many common names found in other countries and languages, especially those of non-European origin.
-
-It is unknown how Ontario handles further nuance in names. Conforming to a "First Name Last Name" Western standard may already reduce the complexity in naming that is found throughout the world. The effect of this cultural bias on the data is noticable for first names that have an added name in parentheses. Though these instances were not highly frequent, names within parentheses were nearly always Anglosaxon in origin. Whether these parentheticals were voluntarily provided to the public salary disclosure or not. 
-
-
-
-
-Mihaljević et al criticize the 
-
-\vspace{-2truemm}
-
-
-
-
-
-```{r setup}
+```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -112,6 +41,20 @@ library(ggplot2)
 library(bayesplot)
 library(kableExtra)
 ```
+
+## Introduction
+
+\vspace{-2truemm}
+
+Anintro...
+
+\vspace{-4truemm}
+
+## Data
+
+\vspace{-2truemm}
+
+brief..
 
 ```{r load, message=FALSE, warning=FALSE}
 #Load Data
@@ -134,26 +77,228 @@ raw_data =
 
 ```
 
-```{r fix}
+```{r fix2016}
 #fix the rows that were skipped
 #set the year as 2016, instead of NA
 raw_data <- raw_data %>% mutate(`Calendar Year` = if_else(is.na(`Calendar Year`), 2016, `Calendar Year`))
 ```
 
-```{r }
+```{r nullchecks, include=FALSE}
 raw_data %>% mutate(SalaryPaid = parse_number(`Salary Paid`), .after = "Salary Paid", .keep="unused")  %>%
     map_df(function(x) sum(is.na(x))) %>%
     gather(feature, num_nulls) %>%
     print(n = 100)
-```
 
+```
 
 ```{r UofT_filter}
 UofT <- raw_data %>% filter(Employer %in% c('University of Toronto','University Of Toronto')) %>% 
                               rename(FirstName = `First Name`)
 ```
 
-```{r sample_head}
+```{r gender_first}
+first_names <- UofT %>% distinct(FirstName)
+
+#construct counting dataframe for reference "na_gender"
+na_gender <-data.frame(iteration = "Unique Names",NAs=as.integer(nrow(first_names)))
+na_gender$iteration <- as.character(na_gender$iteration)
+
+#attach to gender package
+gendered_names <- gender(first_names$FirstName)
+```
+
+```{r first_pass}
+#join to UofT
+UofT_gen <- left_join(UofT, gendered_names, by = c("FirstName" = "name"))
+UofT_gen <- UofT_gen %>% mutate(ID = row_number())
+
+#append to na_gender
+na_gender <- rbind(na_gender, c("First Pass",nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))))
+```
+
+```{r jan, echo = FALSE}
+#jan sample case
+jan <- UofT_gen %>% filter(FirstName == "Jan") %>% distinct(`Last Name`, FirstName, gender, `Job Title`)
+```
+
+```{r two_first_names, message=FALSE, warning=FALSE }
+#split names like "Thomas William" into two columns, first  and second
+adj <- UofT %>%  
+  mutate(FirstNameadj = str_replace(FirstName, "\\s", "|")) %>% 
+  separate(FirstNameadj, into = c("first","second"), sep = "\\|")
+
+#attach to gender table for each
+gendered_names <- gender(adj$first)
+gendered_names_second <- gender(adj$second)
+```
+
+```{r UofTgen_join1}
+#join to UofT_gen for each
+UofT_gen <- left_join(adj, gendered_names, by = c("first" = "name")) %>% distinct()
+UofT_gen <- UofT_gen %>% mutate(ID = row_number())
+
+UofT_gen_x <- left_join(adj, gendered_names_second, by = c("second" = "name")) %>% distinct()
+UofT_gen <- UofT_gen %>% 
+    mutate(gender = coalesce(gender,UofT_gen_x$gender))
+
+#append to na_gender
+na_gender <- rbind(na_gender, c("Two First Names",nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))))
+```
+
+```{r paren_names, message=FALSE, warning=FALSE}
+#split names like "Thomas (William)" into two columns, first and paren
+adj <-
+  UofT %>% 
+  mutate(FirstNameadj = str_replace(FirstName, "\\s", "|")) %>% 
+  separate(FirstNameadj, into = c("first","second"), sep = "\\|") %>% 
+  mutate(paren = str_extract(second, "\\(([^()]*)\\)")) %>% 
+  mutate(paren = str_replace(paren,"\\(",'')) %>% 
+  mutate(paren = str_replace(paren,"\\)",''))
+
+#attach paren names to gender package
+gendered_names <- gender(adj$paren)
+```
+
+```{r UofTgen_join2}
+#join to UofT_gen 
+UofT_gen_y <- left_join(adj, gendered_names, by = c("paren" = "name")) %>% distinct()
+UofT_gen <- UofT_gen %>% 
+    mutate(gender = coalesce(gender,UofT_gen_y$gender))
+
+#append to na_gender
+na_gender <- rbind(na_gender, c("Parentheses Names",nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))))
+```
+
+```{r hypen_names, message=FALSE, warning=FALSE}
+#split names like "Thomas-William" into two columns, first and second
+adj <- UofT %>%  
+  mutate(FirstNameadj = str_replace(FirstName, "-", "|")) %>% 
+  separate(FirstNameadj, into = c("first","second"), sep = "\\|")
+
+#attach first names to gender package
+gendered_names <- gender(adj$first)
+```
+
+```{r UofTgen_join3}
+#join to UofT_gen 
+UofT_gen_z <- left_join(adj, gendered_names, by = c("first" = "name")) %>% distinct()
+UofT_gen <- UofT_gen %>% 
+    mutate(gender = coalesce(gender,UofT_gen_z$gender))
+
+#append to na_gender
+na_gender <- rbind(na_gender, c("Hyphenated First Names",nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))))
+```
+
+```{r UofTgen_clean}
+#minor format changes to UofT_gen
+UofT_gen <- UofT_gen %>% mutate(SalaryPaid = parse_number(`Salary Paid`), .after = "Salary Paid", .keep="unused")
+UofT_gen <- UofT_gen %>% mutate(CalendarYear =  as.factor(`Calendar Year`), .after = "Calendar Year", .keep="unused")
+```
+
+```{r UofTprofs, warning= FALSE}
+#create UofT professors
+UofT_prof <- UofT_gen %>% mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
+            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|") %>% filter(outer %like% 'rofessor') %>% 
+            filter(CalendarYear ==2019) %>% group_by(outer) %>% 
+            filter(n() >= 5)
+
+
+UofT_prof$outer2 <- str_wrap(UofT_prof$outer, width = 15)
+```
+
+```{r UofTdeans, warning= FALSE}
+#create UofT deans
+UofT_dean <- UofT_gen %>% mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
+            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|") %>% filter(outer %like% 'Dean') %>% 
+            filter(CalendarYear ==2019) %>% group_by(outer) %>% 
+            filter(n() >= 5)
+
+UofT_dean$outer2 <- str_wrap(UofT_dean$outer, width = 15)
+```
+
+```{r UofTischool, include=FALSE, warning=FALSE}
+#create ischool dean and professors for 2019
+UofT_ischool <- UofT_gen %>% filter(`Job Title` %like% 'of Information') %>% 
+            filter(CalendarYear ==2019) %>% filter(`Last Name` %in% c('Eskenazi','Fiege') == FALSE) %>% 
+            mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
+            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|")
+
+UofT_ischool$outer2 <- str_wrap(UofT_ischool$outer, width = 15)
+```
+
+```{r plot1_creation}
+#boxplot of salary by year by gender
+`(ᵔᴥᵔ)` <- ggplot(UofT_gen, aes(x=CalendarYear, y=SalaryPaid, fill=gender)) + 
+    geom_boxplot(outlier.shape = NA)
+
+ylim1 = boxplot.stats(UofT_gen$SalaryPaid)$stats[c(1, 5)]
+
+`(ᵔᴥᵔ)` = `(ᵔᴥᵔ)` + coord_cartesian(ylim = ylim1*1.05)
+```
+
+```{r plot2_creation, warning=FALSE, message=FALSE}
+#boxplot of salary for professor by gender
+`|⚆ _ ⚆|` <- ggplot(UofT_prof , aes(x=outer2, y=SalaryPaid, fill=gender)) + 
+    geom_boxplot()
+
+ylim1 = boxplot.stats(UofT_prof$SalaryPaid)$stats[c(1, 5)]
+
+`|⚆ _ ⚆|` = `|⚆ _ ⚆|` + coord_cartesian(ylim = ylim1*1.05)
+```
+
+```{r plot3_creation,  warning=FALSE, message=FALSE}
+#boxplot of salary for deans by gender
+`|-.-|` <- ggplot(UofT_dean, aes(x=outer2, y=SalaryPaid, fill=gender)) + 
+    geom_boxplot()
+
+ylim1 = boxplot.stats(UofT_dean$SalaryPaid)$stats[c(1, 5)]
+
+`|-.-|` = `|-.-|` + coord_cartesian(ylim = ylim1*1.05)
+```
+
+```{r ischool_plot, include=FALSE}
+#boxplot of ischool professors and dean by gender, not included in paper
+`(☞ﾟヮﾟ)☞` <- ggplot(UofT_ischool ,aes(x=outer2, y=SalaryPaid, fill=gender)) + 
+    geom_boxplot()
+
+`(☞ﾟヮﾟ)☞`
+```
+
+```{r plot4_creation, warning = FALSE}
+#density plot salary faceted by gender
+`｡◕‿◕｡` <- ggplot(data = UofT_gen, aes(x=SalaryPaid)) + geom_density(aes(fill=gender), alpha = 0.4)
+
+`｡◕‿◕｡` <- `｡◕‿◕｡` + facet_wrap( ~ gender) + xlim(c(0, 500000))
+```
+
+```{r plot4_v2, include=FALSE}
+#density plot salary by gender
+`(^̮^)` <- ggplot(UofT_gen, aes(x = SalaryPaid, y = ..density.., fill = gender)) +
+  geom_density(alpha = 0.4) + xlim(c(0, 500000))
+
+`(^̮^)`
+```
+
+```{r plot4_v3, include=FALSE}
+#density plot salary above 500k
+`(^̮^)` <- ggplot(UofT_gen, aes(x = SalaryPaid, y = ..density.., fill = gender)) +
+  geom_density(alpha = 0.4)  + xlim(c(500000, 1500000))
+
+`(^̮^)`
+```
+
+
+\vspace{-4truemm}
+
+### Dataset
+
+\vspace{-2truemm}
+
+Ontario makes available public sector salary disclosure from 1996 to 2019 (or most current year) avialable through the Open Data Ontario portal, or for each year as .csv file from [ontario.ca/page/public-sector-salary-disclosure](https://www.ontario.ca/page/public-sector-salary-disclosure).
+
+Using 
+
+```{r table_1, message=FALSE, warning=FALSE}
 babynames <- sample(x = babynames::babynames %>% filter(prop > 0.01) %>% 
                                    select(name) %>% unique() %>% unlist(), 
                                  size = 6, replace = FALSE)
@@ -165,185 +310,113 @@ UofT_fake$`First Name` <- babynames
 UofT_fake <- UofT_fake %>% relocate(`First Name`, .after = `Last Name`)
 kable(UofT_fake)
 ```
+*Table 1*
 
-```{r emp_by_year, echo=FALSE, message=FALSE, warning=FALSE}
+\vspace{-4truemm}
+
+### Gender Encoding Process
+
+Ontario does not specify "gender" in public sector salary disclosures. As such, gender columns are calculated using the `gender` package [@gender] and its underlying dataset built from US Census and Social Security data. The package assigns a male/female label based on the frequency of male to female names (whichever is more frequent) within a specified time period (in this case, 1932 to 2012, the most recent period, as it can be safely assumed that nearly all working professionals will be born within this range). In cases where a name is not present, no gender is assigned.
+
+There are 4215 distinct first names for University of Toronto staff between 2012 and 2019. At first pass, the package sucessfully assigned 2652 first names (63%). Among the unmatched, a highly frequent cause of non-matches was persons with two first names listed (e.g. Charles James). These were split and 837 (53% of unmatched, 20% of total, bringing matched names to 83%) were rematched successfully. Priority was given to the first of these two names (i.e. Charles), but some were matched on the second of these names (i.e. James). The latter was especially useful for names which had been abbreviated (e.g. C. James). Similarly, some unmatched names were two first names. An additional 90 were matched in the same mechnanism. Of remaining unmatched names, a small number (15) were matched on alternative names listed in parentheses. In total 3604 names were matched (86%). The remaining 14% were left as "NA" as are noted throughout the analysis. 
+
+```{r table_2}
+kable(na_gender)
+```
+*Table 2*
+
+Some writings about this table
+
+```{r table_3, message=FALSE}
+kable(UofT_gen %>% group_by(gender,) %>% 
+            summarize(count = n(), 
+                      mean_sal = mean(SalaryPaid),
+                      max_sal = max(SalaryPaid)))
+
+```
+*Table 3* 
+
+Some writings about these plots
+
+```{r plot1, warning=FALSE}
+#display boxplot of salary by year by gender
+`(ᵔᴥᵔ)`
+```
+*Plot 1*
+
+```{r plot2,  warning=FALSE}
+#display boxplot of salary for professor by gender
+`|⚆ _ ⚆|` + coord_flip()
+```
+*Plot 2*
+
+```{r plot3,  warning=FALSE}
+# display boxplot of salary for deans by gender
+`|-.-|` + coord_flip()
+```
+*Plot 3*
+
+```{r plot4, warning = FALSE}
+`｡◕‿◕｡` + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+*Plot 4*
+
+This process leaves much to be desired. See §Ethical Considerations for further discussion and the approach's ramifications.
+
+\vspace{-2truemm}
+
+### Ethical Considerations 
+
+References to "gender" within this paper should be viewed with skepticism. These references are binary, presumptive, declarative without recourse, and are much closer in definition to "sex assigned at birth" than gender identity or expression. Current gender theory treats gender as a spectrum with nuance far beyond the capabilities of models presented here. Analytical and model-based research that uses gender as a primary motivator to answer research questions should 
+
+The `gender` package [@gender] explicitly references several crucial ethical concerns with its use. Firstly, the use of this package should be used in aggregate. The University of Toronto ranges from 2854 (2012) to 4342 (2019) employees, which should sufficiently qu
+
+
+```{r table_4, echo=FALSE, message=FALSE, warning=FALSE}
 kable(UofT %>% group_by(`Calendar Year`,) %>% 
             summarize('Employees' = n(), 
                       mean_sal = mean(parse_number(`Salary Paid`)),
                       max_sal = max(parse_number(`Salary Paid`))))
 ```
+*Table 4*
 
-```{r gender_first}
-first_names <- UofT %>% distinct(FirstName)
-nrow(first_names)
+Blevins & Mullen exemplify the "Leslie Problem" 
 
-gendered_names <- gender(first_names$FirstName)
-```
-
-```{r }
-UofT_gen <- left_join(UofT, gendered_names, by = c("FirstName" = "name"))
-UofT_gen <- UofT_gen %>% mutate(ID = row_number())
-nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))
-
-```
-```{r jan, echo = FALSE}
-jan <- UofT_gen %>% filter(FirstName == "Jan") %>% distinct(`Last Name`, FirstName, gender, `Job Title`)
-```
-
-```{r message=FALSE, warning=FALSE }
-adj <- UofT %>%  
-  mutate(FirstNameadj = str_replace(FirstName, "\\s", "|")) %>% 
-  separate(FirstNameadj, into = c("first","second"), sep = "\\|")
-
-gendered_names <- gender(adj$first)
-gendered_names_second <- gender(adj$second)
-```
-
-```{r }
-UofT_gen <- left_join(adj, gendered_names, by = c("first" = "name")) %>% distinct()
-UofT_gen <- UofT_gen %>% mutate(ID = row_number())
-
-UofT_gen_x <- left_join(adj, gendered_names_second, by = c("second" = "name")) %>% distinct()
-UofT_gen <- UofT_gen %>% 
-    mutate(gender = coalesce(gender,UofT_gen_x$gender))
-
-nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))
-```
-
-```{r message=FALSE, warning=FALSE}
-adj <-
-  UofT %>% 
-  mutate(FirstNameadj = str_replace(FirstName, "\\s", "|")) %>% 
-  separate(FirstNameadj, into = c("first","second"), sep = "\\|") %>% 
-  mutate(paren = str_extract(second, "\\(([^()]*)\\)")) %>% 
-  mutate(paren = str_replace(paren,"\\(",'')) %>% 
-  mutate(paren = str_replace(paren,"\\)",''))
-
-gendered_names <- gender(adj$paren)
-```
-
-```{r }
-UofT_gen_y <- left_join(adj, gendered_names, by = c("paren" = "name")) %>% distinct()
-UofT_gen <- UofT_gen %>% 
-    mutate(gender = coalesce(gender,UofT_gen_y$gender))
-
-nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))
-```
-
-```{r message=FALSE, warning=FALSE}
-adj <- UofT %>%  
-  mutate(FirstNameadj = str_replace(FirstName, "-", "|")) %>% 
-  separate(FirstNameadj, into = c("first","second"), sep = "\\|")
-
-gendered_names <- gender(adj$first)
-```
-
-```{r }
-UofT_gen_z <- left_join(adj, gendered_names, by = c("first" = "name")) %>% distinct()
-UofT_gen <- UofT_gen %>% 
-    mutate(gender = coalesce(gender,UofT_gen_z$gender))
-
-nrow(UofT_gen %>% filter(is.na(gender)) %>% distinct(FirstName))
-```
-
-```{r }
-UofT_gen <- UofT_gen %>% mutate(SalaryPaid = parse_number(`Salary Paid`), .after = "Salary Paid", .keep="unused")
-
-UofT_gen <- UofT_gen %>% mutate(CalendarYear =  as.factor(`Calendar Year`), .after = "Calendar Year", .keep="unused")
-```
-
-```{r message=FALSE}
-UofT_gen %>% group_by(gender,) %>% 
-            summarize(gender_n = n(), 
-                      mean_sal = mean(SalaryPaid),
-                      max_sal = max(SalaryPaid))
-
-```
-
-```{r }
-`(ᵔᴥᵔ)` <- ggplot(UofT_gen, aes(x=CalendarYear, y=SalaryPaid, fill=gender)) + 
-    geom_boxplot(outlier.shape = NA)
-
-ylim1 = boxplot.stats(UofT_gen$SalaryPaid)$stats[c(1, 5)]
-
-`ʕ•ᴥ•ʔ` = `(ᵔᴥᵔ)` + coord_cartesian(ylim = ylim1*1.05)
-`ʕ•ᴥ•ʔ` 
-
-```
+In addition to not having year of birth, we 
 
 
-```{r }
-UofT_prof <- UofT_gen %>% mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
-            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|") %>% filter(outer %like% 'rofessor') %>% 
-            filter(CalendarYear ==2019) %>% group_by(outer) %>% 
-            filter(n() >= 5)
+
+This approach is certain to misgender individuals (Mihaljević et al 2019) 
+
+Even when limited to a binary approach, misgendering occurs. An examination of names of high ambiguity such as "Jan" demonstrates the issue; three professors teaching within 2012-2019 are gendered as "female" but manual review of faculty profiles suggest two of these three are much more likely to be "male". Even if provided with birth years, these are likely to be unresolved (Jan becomes equally male:female between 1975 and 1980, before coming considerably more male by 2000.) The rate at which this occurs across the entire dataset is unknown. 
+
+"Jan" varies greatly in gender frequency by cultural origin. In the Netherlands, Catalonia, and Norway the name has been one of the most popular (if not most popular) "male" first names. The `gender` package [@gender] by contrast, is based solely on US data, where Jan popularity and encoding has varied. As such, the encoding process erases any cultural nuance, even when it might be otherwise interpretable by last names. 
+
+Worse yet, this US data filter outright excludes many common names found in other countries and languages, especially those of non-European origin.
+
+It is unknown how Ontario (or the University of Toronto) handles further nuance in names. Conforming to a "First Name Last Name" Western standard may already reduce the complexity in naming that is found throughout the world. The effect of this cultural bias on the data is noticeable for first names that have an added name in parentheses. Though these instances were not highly frequent, names within parentheses were nearly always Anglo-Saxon in origin. Whether these parentheticals were voluntarily provided to the public salary disclosure or not is unknown.
 
 
-UofT_prof$outer2 <- str_wrap(UofT_prof$outer, width = 15)
-`|>.<|` <- ggplot(UofT_prof , aes(x=outer2, y=SalaryPaid, fill=gender)) + 
-    geom_boxplot()
 
-ylim1 = boxplot.stats(UofT_prof$SalaryPaid)$stats[c(1, 5)]
+Mihaljević et al criticize the 
 
-`|◉_◉|` = `|>.<|` + coord_cartesian(ylim = ylim1*1.05)
-`|◉_◉|` + coord_flip()
+\vspace{-2truemm}
 
-```
+## Model
 
 
-```{r }
-UofT_dean <- UofT_gen %>% mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
-            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|") %>% filter(outer %like% 'Dean') %>% 
-            filter(CalendarYear ==2019) %>% group_by(outer) %>% 
-            filter(n() >= 5)
-
-UofT_dean$outer2 <- str_wrap(UofT_dean$outer, width = 15)
-`|-.-|` <- ggplot(UofT_dean, aes(x=outer2, y=SalaryPaid, fill=gender)) + 
-    geom_boxplot()
-
-ylim1 = boxplot.stats(UofT_dean$SalaryPaid)$stats[c(1, 5)]
-
-`|⚆ _ ⚆|` = `|-.-|` + coord_cartesian(ylim = ylim1*1.05)
-`|⚆ _ ⚆|` + coord_flip()
-```
+## Results
 
 
-```{r }
-UofT_ischool <- UofT_gen %>% filter(`Job Title` %like% 'of Information') %>% 
-            filter(CalendarYear ==2019) %>% filter(`Last Name` %in% c('Eskenazi','Fiege') == FALSE) %>% 
-            mutate(JobTitleAdj = str_replace(str_replace(`Job Title`, ", ", "|"), " of ","|")) %>% 
-            separate(JobTitleAdj, into = c("outer","inner"), sep = "\\|")
-
-UofT_ischool$outer2 <- str_wrap(UofT_ischool$outer, width = 15)
-`(☞ﾟヮﾟ)☞` <- ggplot(UofT_ischool ,aes(x=outer2, y=SalaryPaid, fill=gender)) + 
-    geom_boxplot()
-`(☞ﾟヮﾟ)☞`
-```
-
-```{r }
-`｡◕‿◕｡` <- ggplot(data = UofT_gen, aes(x=SalaryPaid)) + geom_density(aes(fill=gender), alpha = 0.4)
-`｡◕‿◕｡` <- `｡◕‿◕｡` + facet_wrap( ~ gender)
-`｡◕‿◕｡` + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-```
-
-
-```{r }
-ggplot(UofT_gen, aes(x = SalaryPaid, y = ..density.., fill = gender)) +
-  geom_density()
-
-```
-
-```{r }
+```{r binomialmodel_1, message=FALSE, warning=FALSE, include=FALSE}
+#binomial model
 UofT_bi <- UofT_gen %>% fastDummies::dummy_cols(select_columns = "gender", ignore_na = TRUE) %>% 
-  select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, `Job Title`, CalendarYear, gender_female) %>% 
+  select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, `Job Title`, CalendarYear, gender_female, gender_male) %>% 
   mutate(SalaryPaid100 = SalaryPaid/100) %>% select(-SalaryPaid) %>% 
   mutate(CalendarYear = as.integer(as.character(CalendarYear)))
 
 #UofT_bi <- UofT_gen %>% mutate(gender = fastDummies::dummy_cols(select_columns = gender))
-  
 #UofT_bi_min <- UofT_bi %>% select(CalendarYear,gender_female, SalaryPaid100)
-
-
 
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 fit1 <- stan_glm(gender_female ~ SalaryPaid100, data = UofT_bi,
@@ -352,22 +425,29 @@ fit1 <- stan_glm(gender_female ~ SalaryPaid100, data = UofT_bi,
                  cores = 6, seed = 12345)
 
 summary(fit1)
+```
+
+```{r summary_model1}
+kable(summary(fit1))
 
 round(posterior_interval(fit1, prob = 0.5), 2)
 ```
 
-```{r }
+```{r bayesplottheme}
 theme_set(bayesplot::theme_default())
 ```
 
-```{r }
-# Predicted probability as a function of x
-pr_switch <- function(x, ests) plogis(ests[1] + ests[2] * x)
+```{r jitt_fx}
 # A function to slightly jitter the binary data
 jitt <- function(...) {
   geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
              size = 2, shape = 21, stroke = 0.2)
 }
+```
+
+```{r bayes_fit1_plot1, warning=FALSE}
+# Predicted probability as a function of x
+pr_switch <- function(x, ests) plogis(ests[1] + ests[2] * x)
 ggplot(UofT_bi, aes(x = SalaryPaid100, y = gender_female, color = gender_female)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   jitt(x="SalaryPaid100") +
@@ -375,16 +455,20 @@ ggplot(UofT_bi, aes(x = SalaryPaid100, y = gender_female, color = gender_female)
                 size = 2, color = "gray35")
 ```
 
-
-```{r }
+```{r binomialmodel_2, message=FALSE, warning=FALSE, include=FALSE}
+#binomial model with CalendarYear added
 fit2 <- update(fit1, formula = gender_female ~ SalaryPaid100 + CalendarYear)
 
 summary(fit2)
+```
+
+```{r summary_model2}
+kable(summary(fit2))
 
 (coef_fit2 <- round(coef(fit2), 3))
 ```
 
-```{r, fig.width=10,fig.height=11}
+```{r bayes_fit2_plot1, fig.width=10,fig.height=11, warning=FALSE}
 pr_switch2 <- function(x, y, ests) plogis(ests[1] + ests[2] * x + ests[3] * y)
 grid <- expand.grid(SalaryPaid100 = seq(0, 10000, length.out = 101),
                     CalendarYear = seq(2012, 2019)) #seq(2016, 2019))
@@ -393,34 +477,35 @@ ggplot(grid, aes(x = CalendarYear, y = SalaryPaid100)) +
   geom_tile(aes(fill = prob)) +
   geom_jitter(data = UofT_bi, aes(color = factor(gender_female)), size = 2, alpha = 0.85) +
   scale_fill_gradient() +
-  scale_color_manual("female", values = c("white", "black"), labels = c("No", "Yes"))
+  scale_color_manual("gender", values = c("white", "black","orange"), labels = c("Male", "Female","NA")) +
+  ylim(100,10000)
 
 ```
 
-
-```{r }
+```{r bayes_fit2_plot2, warning=FALSE, message=FALSE, fig.width=6}
 # Quantiles
-q_ars <- quantile(UofT_bi$SalaryPaid100, seq(0, 1, 0.25))
-q_dist <- quantile(UofT_bi$CalendarYear, seq(0, 1, 0.25))
+q_sal <- quantile(UofT_bi$SalaryPaid100, seq(0, 1, 0.25))
+q_cal <- quantile(UofT_bi$CalendarYear, seq(0, 1, 0.25))
 base <- ggplot(UofT_bi) + xlim(c(0, NA)) +
   scale_y_continuous(breaks = c(0, 0.5, 1))
-vary_arsenic <- base + jitt(x="CalendarYear", y="gender_female", color="gender_female") + xlim(2012,2019)#xlim(2016,2019)
-vary_dist <- base + jitt(x="SalaryPaid100", y="gender_female", color="gender_female")
-for (i in 1:5) {
-  vary_dist <-
-    vary_dist + stat_function(fun = pr_switch2, color = "gray35",
-                              args = list(ests = coef(fit2), y = q_dist[i])
+vary_sal <- base + jitt(x="CalendarYear", y="gender_female", color="gender_female") + xlim(2012,2019)#xlim(2016,2019)
+vary_cal <- base + jitt(x="SalaryPaid100", y="gender_female", color="gender_female")
+for (i in 1:8) {
+  vary_cal <-
+    vary_cal + stat_function(fun = pr_switch2, color = "gray35",
+                              args = list(ests = coef(fit2), y = q_cal[i])
                               )
-  vary_arsenic <-
-    vary_arsenic + stat_function(fun = pr_switch2, color = "gray35",
-                                 args = list(ests = coef(fit2), x = q_ars[i])
+  vary_sal <-
+    vary_sal + stat_function(fun = pr_switch2, color = "gray35",
+                                 args = list(ests = coef(fit2), x = q_sal[i])
                                  )
 }
-bayesplot_grid(vary_dist, vary_arsenic,
-               grid_args = list(ncol = 2))
+bayesplot_grid(vary_cal, vary_sal,
+               grid_args = list(ncol = 1))
 ```
 
-```{r }
+```{r binomialmodel_3,  message=FALSE, warning=FALSE, include=FALSE}
+#binomial model of filtered to professors
 UofT_prof_bi <- UofT_prof %>% rename("JobTitleSimple" = "outer") %>%
     fastDummies::dummy_cols(select_columns = "gender", ignore_na = TRUE) %>%
     select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, JobTitleSimple, CalendarYear, gender_female) %>% 
@@ -435,18 +520,18 @@ fit3 <- stan_glm(gender_female ~ SalaryPaid100, data = UofT_prof_bi,
                  cores = 6, seed = 12345)
 
 summary(fit3)
+```
+
+```{r summary_model3}
+kable(summary(fit3))
 
 round(posterior_interval(fit3, prob = 0.5), 2)
 ```
 
-```{r }
+```{r bayes_fit3_plot1, warning=FALSE}
 # Predicted probability as a function of x
 pr_switch <- function(x, ests) plogis(ests[1] + ests[2] * x)
-# A function to slightly jitter the binary data
-jitt <- function(...) {
-  geom_point(aes_string(...), position = position_jitter(height = 0.05, width = 0.1),
-             size = 2, shape = 21, stroke = 0.2)
-}
+
 ggplot(UofT_prof_bi, aes(x = SalaryPaid100, y = gender_female, color = gender_female)) +
   scale_y_continuous(breaks = c(0, 0.5, 1)) +
   jitt(x="SalaryPaid100") +
@@ -454,15 +539,20 @@ ggplot(UofT_prof_bi, aes(x = SalaryPaid100, y = gender_female, color = gender_fe
                 size = 2, color = "gray35")
 ```
 
-```{r }
+```{r binomialmodel_4, message=FALSE, warning=FALSE, include=FALSE}
+#binomial model with professors label added
 fit4 <- update(fit3, formula = gender_female ~ SalaryPaid100 + JobTitleSimple)
 
 summary(fit4)
+```
+
+```{r summary_model4}
+kable(summary(fit4))
+
 (coef_fit4 <- round(coef(fit4), 3))
 ```
 
-```{r, fig.width=10,fig.height=11}
-
+```{r bayes_fit4_plot1, fig.width=10,fig.height=11, warning=FALSE, message=FALSE}
 labelsp = c('Assistant Professor','Associate Professor','Associate Professor and Chair',
             'Professor','Professor and Associate Chair','Professor and Chair',
             'Professor and Dean','Professor and Director','Professor and Program Coordinator','University Professor')
@@ -477,73 +567,85 @@ ggplot(grid, aes(y = SalaryPaid100, x = as.integer(as.factor(JobTitleSimple)))) 
   scale_fill_gradient() +
   scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10), labels = labelsp) +
   geom_jitter(data = UofT_prof_bi, aes(color = factor(gender_female)), size = 2, alpha = 0.85) +
-  scale_color_manual("female", values = c("white", "black"), labels = c("No", "Yes")) 
+  scale_color_manual("gender", values = c("white", "black","orange"), labels = c("Male", "Female","NA")) +
+  ylim(100,5000)
     
 
 ```
 
-```{r }
+```{r continuousmodel_1, message=FALSE, warning=FALSE, include=FALSE}
+#continous model
 UofT_cont <- UofT_gen %>%
     select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, `Job Title`, CalendarYear, gender) %>% 
     mutate(SalaryPaid100 = SalaryPaid/100) %>% select(-SalaryPaid) %>% 
     mutate(CalendarYear = as.integer(as.character(CalendarYear))) 
 
 
-post1 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_cont,
-                  #family = gaussian(link = "identity"),
+fit5 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_cont,
+                  family = gaussian(link = "identity"),
                   cores = 6, seed = 12345)
 
-summary(post1)
-
-
+summary(fit5)
 ```
 
-```{r }
+```{r summary_model5}
+kable(summary(fit5))
+```
+
+```{r bayes_fit5_plot1, warning=FALSE}
 base <- ggplot(UofT_cont, aes(x = gender, y = SalaryPaid100)) +
   geom_point(size = 1, position = position_jitter(height = 0.05, width = 0.1)) +ylim(1000,6000)
 
-base + geom_abline(intercept = coef(post1)[1], slope = coef(post1)[2],
+base + geom_abline(intercept = coef(fit5)[1], slope = coef(fit5)[2],
                    color = "skyblue4", size = 1)
 
 ```
-```{r }
-draws <- as.data.frame(post1)
+
+```{r bayes_fit5_plot2, warning=FALSE}
+draws <- as.data.frame(fit5)
 colnames(draws)[1:2] <- c("a", "b")
 
 base +
   geom_abline(data = draws, aes(intercept = a, slope = b),
               color = "skyblue", size = 0.2, alpha = 0.25) +
-  geom_abline(intercept = coef(post1)[1], slope = coef(post1)[2],
+  geom_abline(intercept = coef(fit5)[1], slope = coef(fit5)[2],
               color = "skyblue4", size = 1)
 ```
-```{r }
-post2 <- update(post1, formula = . ~ gender + CalendarYear)
-summary(post2)
+
+```{r continuousmodel_2, message=FALSE, warning=FALSE, include=FALSE}
+#continuous model with CalendarYear added
+fit6 <- update(fit5, formula = . ~ gender + CalendarYear)
+summary(fit6)
 ```
-```{r }
+
+```{r summary_model6}
+kable(summary(fit6))
+```
+
+```{r bayes_fit6_plot1, warning=FALSE}
 reg0 <- function(x, ests) cbind(1, 0, x) %*% ests
 reg1 <- function(x, ests) cbind(1, 1, x) %*% ests
 
-args <- list(ests = coef(post2))
+args <- list(ests = coef(fit6))
 lgnd <- guide_legend(title = NULL)
 base2 <- ggplot(UofT_cont, aes(x = CalendarYear, fill = gender)) + 
   geom_jitter(aes(y = SalaryPaid100), shape = 21, stroke = .2, size = 1) +
   guides(color = lgnd, fill = lgnd) +
   theme(legend.position = "right") +
-  ylim(1000,2000)
+  ylim(1000,5000)
 base2 +
   stat_function(fun = reg0, args = args, aes(color = "female"), size = 1.5) +
   stat_function(fun = reg1, args = args, aes(color = "male"), size = 1.5) 
 ```
 
-```{r }
+```{r fit6_pred}
+#make predictions on the posterior based on gender
 Salary_SQ <- seq(from = 1000, to = 6000, by = 100)
-y_female <- posterior_predict(post2, newdata = data.frame(gender = "female", SalaryPaid100 = Salary_SQ,CalendarYear = 2020))
-y_male <- posterior_predict(post2, newdata = data.frame(gender = "male", SalaryPaid100 = Salary_SQ,CalendarYear = 2020))
-dim(y_female)
+y_female <- posterior_predict(fit6, newdata = data.frame(gender = "female", SalaryPaid100 = Salary_SQ,CalendarYear = 2020))
+y_male <- posterior_predict(fit6, newdata = data.frame(gender = "male", SalaryPaid100 = Salary_SQ,CalendarYear = 2020))
 ```
 
-```{r }
+```{r bayes_fit6_plot2, warning=FALSE}
 par(mfrow = c(1:2), mar = c(5,4,2,1))
 boxplot(y_female, axes = FALSE, outline = FALSE, ylim = c(0,3500),
         xlab = "Salary", ylab = "Predicted 2020 Salary", main = "female")
@@ -553,39 +655,50 @@ boxplot(y_male, outline = FALSE, col = "red", axes = FALSE, ylim = c(0,3500),
         xlab = "Salary", ylab = NULL, main = "male")
 axis(1, at = 1:ncol(y_female), labels = Salary_SQ, las = 3)
 ```
-```{r }
+
+```{r continuousmodel_3,  message=FALSE, warning=FALSE, include=FALSE}
+#continous model of filtered to professors
 UofT_prof_cont <- UofT_prof %>% rename("JobTitleSimple" = "outer") %>%
     select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, JobTitleSimple, CalendarYear, gender) %>% 
     mutate(SalaryPaid100 = SalaryPaid/100) %>% select(-SalaryPaid) %>% 
     mutate(CalendarYear = as.integer(as.character(CalendarYear))) 
 
-post3 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_prof_cont,
+fit7 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_prof_cont,
                   #family = gaussian(link = "identity"),
                   cores = 6, seed = 12345)
-
-summary(post3)
-
+summary(fit7)
 ```
-```{r }
-draws <- as.data.frame(post3)
+
+```{r summary_model7}
+kable(summary(fit7))
+```
+
+```{r bayes_fit7_plot1, warning=FALSE}
+draws <- as.data.frame(fit7)
 colnames(draws)[1:2] <- c("a", "b")
 
 base +
   geom_abline(data = draws, aes(intercept = a, slope = b),
               color = "skyblue", size = 0.2, alpha = 0.25) +
-  geom_abline(intercept = coef(post3)[1], slope = coef(post3)[2],
+  geom_abline(intercept = coef(fit7)[1], slope = coef(fit7)[2],
               color = "skyblue4", size = 1)
 ```
-```{r }
-post4 <- update(post3, formula = . ~ gender + JobTitleSimple)
-summary(post4)
+
+```{r continuousmodel_4, message=FALSE, warning=FALSE, include=FALSE}
+#continuous model with professors label added
+fit8 <- update(fit7, formula = . ~ gender + JobTitleSimple)
+summary(fit8)
 ```
 
-```{r, fig.width=11}
+```{r summary_model8}
+kable(summary(fit8))
+```
+
+```{r bayes_fit8_plot1, fig.width=11, warning=FALSE}
 reg0 <- function(x, ests) cbind(1, 0, x) %*% ests
 reg1 <- function(x, ests) cbind(1, 1, x) %*% ests
 
-args <- list(ests = coef(post4))
+args <- list(ests = coef(fit8))
 lgnd <- guide_legend(title = NULL)
 base2 <- ggplot(UofT_prof_cont, aes(x = JobTitleSimple, fill = gender)) + 
   geom_jitter(aes(y = SalaryPaid100), shape = 21, stroke = .2, size = 1) +
@@ -596,19 +709,24 @@ base2 +
   stat_function(fun = reg0, args = args, aes(color = "female"), size = 1.5) +
   stat_function(fun = reg1, args = args, aes(color = "male"), size = 1.5) 
 ```
-```{r }
+
+```{r continuousmodel_5, message=FALSE, warning=FALSE, include=FALSE, }
+#continous model of filtered to "Professor" job title
 UofT_prof_sing <- UofT_prof %>% rename("JobTitleSimple" = "outer") %>%
     select(`Last Name`, FirstName, SalaryPaid, `Taxable Benefits`, JobTitleSimple, CalendarYear, gender) %>% 
     mutate(SalaryPaid100 = SalaryPaid/100) %>% select(-SalaryPaid) %>% 
     mutate(CalendarYear = as.integer(as.character(CalendarYear))) %>% 
     filter(JobTitleSimple == "Professor")
 
-post5 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_prof_sing,
-                  #family = gaussian(link = "identity"),
+fit9 <- stan_glm(SalaryPaid100 ~ gender, data = UofT_prof_sing,
+                  family = gaussian(link = "identity"),
                   cores = 6, seed = 12345)
 
-summary(post5)
+summary(fit9)
+```
 
+```{r summary_model9}
+kable(summary(fit9))
 ```
 
 # this section not working
@@ -639,6 +757,8 @@ boxplot(y_, outline = FALSE, col = "red", axes = FALSE, ylim = c(0,1),
         xlab = "Salary", ylab = NULL, main = "male")
 axis(1, at = 51:100, labels = Salary_SQ, las = 3)
 ```
+
+## Discussion
 
 \newpage
 
