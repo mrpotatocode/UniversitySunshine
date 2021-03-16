@@ -5,4 +5,4 @@ In this work, exploratory data analysis alongside two Gaussian Bayesian models e
 
 **See the corresponding GitHub [page](https://mrpotatocode.github.io/UniversitySunshine/) for data visualization and analysis**
 
-**See the [rmarkdown](https://github.com/mrpotatocode/UniversitySunshine/tree/main/outputs/paper/analysis.rmd) for full code**
+**See the [rmarkdown](https://github.com/mrpotatocode/UniversitySunshine/tree/main/outputs/paper/analysis.Rmd) for full code**
