@@ -2815,7 +2815,7 @@ gender:
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20\sigma^2)\])
 
 where
-\(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)
+$$\(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)$$
 denotes the subset of all rows taken at time ![formula](https://render.githubusercontent.com/render/math?math=\(\tau\)).
 
 Model 2 is then updated to include job title:
