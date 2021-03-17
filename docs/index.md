@@ -1,3 +1,8 @@
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
+config=TeX-MML-AM_CHTML"
+</script>
+
 # The Wage Gap Persists: How pay imbalances unequally reward male professors at the University of Toronto
 
 Thomas Rosenthal
@@ -2815,7 +2820,7 @@ gender:
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20\sigma^2)\])
 
 where
-<a href="https://www.codecogs.com/eqnedit.php?latex=\(\mathcal{D_{&space;t&space;=&space;\tau}}&space;\subset&space;\mathcal{D}&space;=&space;\{&space;\mathbf{x}_{i,&space;t}&space;\mid&space;t&space;=&space;\tau&space;\}\)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\(\mathcal{D_{&space;t&space;=&space;\tau}}&space;\subset&space;\mathcal{D}&space;=&space;\{&space;\mathbf{x}_{i,&space;t}&space;\mid&space;t&space;=&space;\tau&space;\}\)" title="\(\mathcal{D_{ t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)" /></a>
+$$\(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)$$
 denotes the subset of all rows taken at time ![formula](https://render.githubusercontent.com/render/math?math=\(\tau\)).
 
 Model 2 is then updated to include job title:
