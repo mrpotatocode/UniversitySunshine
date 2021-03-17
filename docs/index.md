@@ -1,8 +1,3 @@
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
-config=TeX-MML-AM_CHTML"
-</script>
-
 # The Wage Gap Persists: How pay imbalances unequally reward male professors at the University of Toronto
 
 Thomas Rosenthal
@@ -2820,7 +2815,7 @@ gender:
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20\sigma^2)\])
 
 where
-$$\(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)$$
+/*!)-*&~n/{"isRoot":true,"isTextMode":true,"isTabularCellsSelected":false,"isPureText":false,"insideInlineMath":false,"lines":[{"blocks":[{"type":"composite","text":"\\math-container","displayMode":false,"elements":{"mathValue":{"lines":[{"blocks":[{"text":"D","style":{"mathType":"\\mathcal"}},{"type":"composite","elements":{"indexValue":{"lines":[{"blocks":[{"text":"t=𝜏"}]}]}},"text":"\\index","style":{"mathType":"\\mathcal"}},{"text":"⊂"},{"text":"D","style":{"mathType":"\\mathcal"}},{"text":"={"},{"text":"x","style":{"mathType":"\\mathbf"}},{"type":"composite","elements":{"indexValue":{"lines":[{"blocks":[{"text":"i,t"}]}]}},"text":"\\index"},{"text":"∣t=𝜏}"}]}]}}}],"style":{"align":"center"}}],"rootEditorId":"321241621323","inlineMathDisplayStyle":null}
 denotes the subset of all rows taken at time ![formula](https://render.githubusercontent.com/render/math?math=\(\tau\)).
 
 Model 2 is then updated to include job title:
