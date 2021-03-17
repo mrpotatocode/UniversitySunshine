@@ -2006,7 +2006,7 @@ unknown
 
 *Table 6*
 
-![](analysis_files/figure-gfm/plot1-1.png)<!-- -->
+![Plot 1](imgs/plot1-1.png)<!-- -->
 
 *Plot 1*
 
@@ -2742,7 +2742,7 @@ counterparts, and the frequency of females in these roles is
 considerably less. Significant outliers are noticeable for male
 professors. Maximum salaries for males are significantly higher.
 
-![](analysis_files/figure-gfm/plot2-1.png)<!-- -->
+![Plot 2](imgs/plot2-1.png)<!-- -->
 
 *Plot 2*
 
@@ -2761,7 +2761,7 @@ well beyond $500,000, even if extremely rarely. No female or unknown
 gender employee makes more than $500,000 for any year or any position in
 this dataset.
 
-![](analysis_files/figure-gfm/plot4-1.png)<!-- -->
+![Plot 3](imgs/plot4-1.png)<!-- -->
 
 *Plot 3*
 
@@ -3271,7 +3271,7 @@ As such, relative to female salaries, **Plot 4** AB lines show
 coefficients with greater intercepts for male and unknown gender
 employees. Standard deviation is higher for unknown than male genders.
 
-![](analysis_files/figure-gfm/bayes_fit1_plot1-1.png)<!-- -->
+![Plot 4](imgs/bayes_fit1_plot1-1.png)<!-- -->
 
 *Plot 4*
 
@@ -4125,7 +4125,7 @@ than females. Male salaries have accelerated slightly faster from
 y-axis to better show AB lines, which are otherwise highly overlapped
 and difficult to differentiate.
 
-![](analysis_files/figure-gfm/bayes_fit2_plot1-1.png)<!-- -->
+![Plot 5](imgs/bayes_fit2_plot1-1.png)<!-- -->
 
 *Plot 5*
 
@@ -5042,7 +5042,7 @@ years presented), or benefitted significantly from faster pay increases
 (a compounding effect), is unclear. Female AB lines are both lower and
 growing at a slower rate than male AB lines as years increase.
 
-![](analysis_files/figure-gfm/bayes_fit3_plot1-1.png)<!-- -->
+![Plot 6](imgs/bayes_fit3_plot1-1.png)<!-- -->
 
 *Plot 6*
 
@@ -5310,7 +5310,7 @@ compared to 4000 simulated uniform distribution (Unif) lines, is fairly
 far off in shape. Further model diagnostic tests are performed within
 the Appendix.
 
-![](analysis_files/figure-gfm/loo_pit3-1.png)<!-- -->
+![Plot 7](imgs/loo_pit3-1.png)<!-- -->
 
 *Plot 7*
 
@@ -5766,7 +5766,7 @@ more (**Plot 9**). It is clear there are far more male professors
 earning $200,000 than female or unknown gender professors. Standard
 deviations are larger for both male and unknown gender AB lines.
 
-![](analysis_files/figure-gfm/bayes_fit4_plot1-1.png)<!-- -->
+![Plot 9](imgs/bayes_fit4_plot1-1.png)<!-- -->
 
 *Plot 9*
 
@@ -6395,7 +6395,7 @@ disciplines or that ranks are less formal. Considering that this is 2019
 data, where female professors are more frequent than other years, this
 inequality is likely to be far worse in previous years.
 
-![](analysis_files/figure-gfm/bayes_fit5_plot1-1.png)<!-- -->
+![Plot 10](imgs/bayes_fit5_plot1-1.png)<!-- -->
 
 *Plot 10*
 
@@ -7092,7 +7092,7 @@ trend). Male professors dominate the eighth year at a frequency of
 896:492 compared to female professors. By contrast, the remaining year
 categories are relatively equal for both male and female professors.
 
-![](analysis_files/figure-gfm/bayes_fit6_plot1-1.png)<!-- -->
+![Plot 11](imgs/bayes_fit6_plot1-1.png)<!-- -->
 
 *Plot 11*
 
@@ -7112,7 +7112,7 @@ far more likely to make more than $300,000 compared to female
 Professors. Without further differentiation, it is difficult to identify
 a discernable reason for this trend.
 
-![](analysis_files/figure-gfm/bayes_fit6_plot2-1.png)<!-- -->
+![Plot 12](imgs/bayes_fit6_plot2-1.png)<!-- -->
 
 *Plot 12*
 
@@ -7126,7 +7126,7 @@ fifth year than females. It is unknown whether this is caused by
 changing universities, or if other social barriers limit female
 Associate Professors from becoming Full Professors.
 
-![](analysis_files/figure-gfm/bayes_fit6_plot3-1.png)<!-- -->
+![Plot 13](imgs/bayes_fit6_plot3-1.png)<!-- -->
 
 *Plot 13*
 
@@ -7397,7 +7397,7 @@ Appendix). The model is not bad, although limitations have been
 discussed throughout this section. Further model diagnostic tests are
 also performed within the Appendix.
 
-![](analysis_files/figure-gfm/loo_pit6-1.png)<!-- -->
+![Plot 14](imgs/loo_pit6-1.png)<!-- -->
 
 *Plot 14*
 
@@ -7489,19 +7489,19 @@ model:
     significantly above the average `y` mean as seen in the previous
     plot (*Plot A1.4*).
 
-![](analysis_files/figure-gfm/pareto3-1.png)<!-- -->
+![Plot A1.1](imgs/pareto3-1.png)<!-- -->
 
 *Plot A1.1*
 
-![](analysis_files/figure-gfm/dens3-1.png)<!-- -->
+![Plot A2.1](imgs/dens3-1.png)<!-- -->
 
 *Plot A2.1*
 
-![](analysis_files/figure-gfm/scatter3-1.png)<!-- -->
+![Plot A3.1](imgs/scatter3-1.png)<!-- -->
 
 *Plot A3.1*
 
-![](analysis_files/figure-gfm/scatterfit3-1.png)<!-- -->
+![Plot A4.1](imgs/scatterfit3-1.png)<!-- -->
 
 *Plot A4.1*
 
@@ -7532,19 +7532,19 @@ iteration of the model:
     $250,000) than Model 1, but shows significant vertical grouping at
     various `y_rep` intervals. (*Plot A2.4*)
 
-![](analysis_files/figure-gfm/pareto6-1.png)<!-- -->
+![Plot A1.2](imgs/pareto6-1.png)<!-- -->
 
 *Plot A1.2*
 
-![](analysis_files/figure-gfm/dens6-1.png)<!-- -->
+![Plot A2.2](imgs/dens6-1.png)<!-- -->
 
 *Plot A2.2*
 
-![](analysis_files/figure-gfm/scatter6-1.png)<!-- -->
+![Plot A3.2](imgs/scatter6-1.png)<!-- -->
 
 *Plot A3.2*
 
-![](analysis_files/figure-gfm/scatterfit6-1.png)<!-- -->
+![Plot A4.2](imgs/scatterfit6-1.png)<!-- -->
 
 *Plot A4.2*
 
