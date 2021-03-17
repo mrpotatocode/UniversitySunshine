@@ -2802,7 +2802,7 @@ experience:
 
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i%20%2B%20\beta_3%20a_i,%20\sigma^2)\])
 
-  - $ \(y_i\) $ is salary paid (in 100s of dollars)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(y_i\)) is salary paid (in 100s of dollars)
   - \(x_i\) is gender (as female, male, unknown)
   - \(z_i\) is calendar year (2012-2019)
   - \(a_i\) is years of experience (1-8)
