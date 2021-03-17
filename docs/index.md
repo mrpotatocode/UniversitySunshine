@@ -2803,9 +2803,9 @@ experience:
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i%20%2B%20\beta_3%20a_i,%20\sigma^2)\])
 
   - ![formula](https://render.githubusercontent.com/render/math?math=\(y_i\)) is salary paid (in 100s of dollars)
-  - \(x_i\) is gender (as female, male, unknown)
-  - \(z_i\) is calendar year (2012-2019)
-  - \(a_i\) is years of experience (1-8)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(x_i\)) is gender (as female, male, unknown)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(z_i\)) is calendar year (2012-2019)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(a_i\)) is years of experience (1-8)
 
 ### Model 2
 
@@ -2816,7 +2816,7 @@ gender:
 
 where
 \(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)
-denotes the subset of all rows taken at time \(\tau\).
+denotes the subset of all rows taken at time ![formula](https://render.githubusercontent.com/render/math?math=\(\tau\)).
 
 Model 2 is then updated to include job title:
 
@@ -2827,12 +2827,12 @@ experience:
 
 ![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i%20%2B%20\beta_3%20a_i,%20\sigma^2)\])
 
-  - \(y_i\) is salary paid (in 100s of dollars)
-  - \(x_i\) is gender (as female, male, unknown)
-  - \(z_i\) is job title (as Assistant Professor, Associate Professor,
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(y_i\)) is salary paid (in 100s of dollars)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(x_i\)) is gender (as female, male, unknown)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(z_i\)) is job title (as Assistant Professor, Associate Professor,
     Professor, Professor and Chair)
-  - \(a_i\) is years of experience (1-8)
-  - \(\tau\) = 2019
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(a_i\)) is years of experience (1-8)
+  - ![formula](https://render.githubusercontent.com/render/math?math=\(\tau\)) = 2019
 
 ## Results
 
