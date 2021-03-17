@@ -2791,7 +2791,7 @@ explanatory.
 Model 1 begins with salary paid (in 100s of dollars) as a function of
 gender:
 
-![formula](https://render.githubusercontent.com/render/math?math=[\y_i%20\sim%20N(\beta_0%20+%20\beta_1%20x_i,%20\sigma^2)\])
+![formula](https://render.githubusercontent.com/render/math?math=\[y_i%20\sim%20N(\beta_0%20+%20\beta_1%20x_i,%20\sigma^2)\])
 
 Model 1 is then updated to include calendar year:
 
