@@ -1,9 +1,12 @@
-The Wage Gap Persists: How pay imbalances unequally reward male
-professors at the University of Toronto
-================
+# The Wage Gap Persists: How pay imbalances unequally reward male professors at the University of Toronto
+
 Thomas Rosenthal
 
 March 1, 2021
+
+## Abstract
+
+In this work, exploratory data analysis alongside two Gaussian Bayesian models explores whether the persistence of wage gaps by gender exist for professors and staff at the University of Toronto. Using Ontario's Public Sector Salary Disclosure from 2012-2019 (colloquially known as "The Sunshine List"), University of Toronto staff populations earning greater than $100,000 per annum are compared by gender, title, and years of experience to examine whether or not wages are fairly distributed. Models find that female professors and staff are paid less than their male counterparts with similar titles, and this wage gap is increasingly worse year over year.
 
 ## Introduction
 
@@ -2788,7 +2791,7 @@ explanatory.
 Model 1 begins with salary paid (in 100s of dollars) as a function of
 gender:
 
-![formula](https://render.githubusercontent.com/render/math?math=[\y_i%20\sim%20N(\beta_0%20+%20\beta_1%20x_i,%20\sigma^2)\])
+![formula](https://render.githubusercontent.com/render/math?math=\y_i%20\sim%20N(\beta_0%20+%20\beta_1%20x_i,%20\sigma^2)\)
 
 Model 1 is then updated to include calendar year:
 
