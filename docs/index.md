@@ -2795,12 +2795,12 @@ gender:
 
 Model 1 is then updated to include calendar year:
 
-\[y_i \sim N(\beta_0 + \beta_1 x_i, + \beta_2 z_i, \sigma^2)\]
+![formula](https://render.githubusercontent.com/render/math?math=(\[y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i,%20\sigma^2)\])
 
 Final updates to Model 1 add years of
 experience:
 
-\[y_i \sim N(\beta_0 + \beta_1 x_i, + \beta_2 z_i + \beta_3 a_i, \sigma^2)\]
+![formula](https://render.githubusercontent.com/render/math?math=(\[y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i%20%2B%20\beta_3%20a_i,%20\sigma^2)\])
 
   - \(y_i\) is salary paid (in 100s of dollars)
   - \(x_i\) is gender (as female, male, unknown)
@@ -2812,7 +2812,7 @@ experience:
 Model 2 begins with salary paid (in 100s of dollars) as a function of
 gender:
 
-\[y_i \sim N(\beta_0 + \beta_1 x_i, \sigma^2)\]
+![formula](https://render.githubusercontent.com/render/math?math=(\[y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20\sigma^2)\])
 
 where
 \(\mathcal{D_{t = \tau}} \subset \mathcal{D} = \{ \mathbf{x}_{i, t} \mid t = \tau \}\)
@@ -2820,12 +2820,12 @@ denotes the subset of all rows taken at time \(\tau\).
 
 Model 2 is then updated to include job title:
 
-\[y_i \sim N(\beta_0 + \beta_1 x_i, + \beta_2 z_i, \sigma^2)\]
+![formula](https://render.githubusercontent.com/render/math?math=(\[y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i,%20\sigma^2)\])
 
 Final updates to Model 2 add years of
 experience:
 
-\[y_i \sim N(\beta_0 + \beta_1 x_i, + \beta_2 z_i + \beta_3 a_i, \sigma^2)\]
+![formula](https://render.githubusercontent.com/render/math?math=(\[y_i%20\sim%20N(\beta_0%20%2B%20\beta_1%20x_i,%20%2B%20\beta_2%20z_i%20%2B%20\beta_3%20a_i,%20\sigma^2)\])
 
   - \(y_i\) is salary paid (in 100s of dollars)
   - \(x_i\) is gender (as female, male, unknown)
