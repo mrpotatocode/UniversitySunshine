@@ -137,87 +137,19 @@ Smith
 
 <td style="text-align:left;">
 
-Karen
+Brandon
 
 </td>
 
 <td style="text-align:left;">
 
-$167,822.46
+$ 169,541.94
 
 </td>
 
 <td style="text-align:left;">
 
-Professor of Cell and Systems Biology
-
-</td>
-
-<td style="text-align:right;">
-
-2016
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Johnson
-
-</td>
-
-<td style="text-align:left;">
-
-Thomas
-
-</td>
-
-<td style="text-align:left;">
-
-$152,060.52
-
-</td>
-
-<td style="text-align:left;">
-
-Professor of Economics
-
-</td>
-
-<td style="text-align:right;">
-
-2017
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Williams
-
-</td>
-
-<td style="text-align:left;">
-
-Joan
-
-</td>
-
-<td style="text-align:left;">
-
-$ 113,188.39
-
-</td>
-
-<td style="text-align:left;">
-
-Sexual and Gender Diversity Officer
+Associate Professor, Teaching Stream
 
 </td>
 
@@ -233,25 +165,93 @@ Sexual and Gender Diversity Officer
 
 <td style="text-align:left;">
 
+Johnson
+
+</td>
+
+<td style="text-align:left;">
+
+Brenda
+
+</td>
+
+<td style="text-align:left;">
+
+219700.02
+
+</td>
+
+<td style="text-align:left;">
+
+Professor of Strategic Management
+
+</td>
+
+<td style="text-align:right;">
+
+2013
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Williams
+
+</td>
+
+<td style="text-align:left;">
+
+Stephanie
+
+</td>
+
+<td style="text-align:left;">
+
+$134,619.48
+
+</td>
+
+<td style="text-align:left;">
+
+Professor, Teaching Stream of Teaching and Learning
+
+</td>
+
+<td style="text-align:right;">
+
+2019
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
 Brown
 
 </td>
 
 <td style="text-align:left;">
 
-Kelly
+John
 
 </td>
 
 <td style="text-align:left;">
 
-$ 109,710.01
+$ 207,210.48
 
 </td>
 
 <td style="text-align:left;">
 
-Computer Network Support Specialist
+Professor of Cell and Systems Biology
 
 </td>
 
@@ -273,25 +273,25 @@ Jones
 
 <td style="text-align:left;">
 
-Carolyn
+Margaret
 
 </td>
 
 <td style="text-align:left;">
 
-157217.02
+$125,980.29
 
 </td>
 
 <td style="text-align:left;">
 
-Professor of Anthropology
+Professor of Physical and Environmental Sciences
 
 </td>
 
 <td style="text-align:right;">
 
-2013
+2017
 
 </td>
 
@@ -307,26 +307,25 @@ Miller
 
 <td style="text-align:left;">
 
-Julie
+Robert
 
 </td>
 
 <td style="text-align:left;">
 
-$121,197.99
+172425.96
 
 </td>
 
 <td style="text-align:left;">
 
-Director, Office Of The Vice President, International, Government And
-Institutional Relations
+Professor, Dalla Lana School of Public Health
 
 </td>
 
 <td style="text-align:right;">
 
-2015
+2012
 
 </td>
 
@@ -1883,6 +1882,12 @@ harder to estimate.
 
 Salaries by Gender (all years, all positions)
 
+<table class="table" style="margin-left: auto; margin-right: auto;">
+
+<caption>
+
+Salaries by Gender (all years, all positions)
+
 </caption>
 
 <thead>
@@ -2043,7 +2048,7 @@ count
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 pct\_change
 
@@ -2075,7 +2080,7 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
 NA
 
@@ -2103,9 +2108,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-10.0190840
+10.02
 
 </td>
 
@@ -2131,9 +2136,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.2445794
+6.24
 
 </td>
 
@@ -2159,9 +2164,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.4489796
+2.45
 
 </td>
 
@@ -2187,9 +2192,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-10.5976096
+10.60
 
 </td>
 
@@ -2215,9 +2220,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-7.4927954
+7.49
 
 </td>
 
@@ -2243,9 +2248,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-9.5844504
+9.58
 
 </td>
 
@@ -2271,9 +2276,9 @@ female
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-10.5198777
+10.52
 
 </td>
 
@@ -2299,7 +2304,7 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
 NA
 
@@ -2327,9 +2332,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-5.9925094
+5.99
 
 </td>
 
@@ -2355,9 +2360,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.4169611
+4.42
 
 </td>
 
@@ -2383,9 +2388,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3.4968979
+3.50
 
 </td>
 
@@ -2411,9 +2416,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-5.3405995
+5.34
 
 </td>
 
@@ -2439,9 +2444,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3.2591826
+3.26
 
 </td>
 
@@ -2467,9 +2472,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-5.8617234
+5.86
 
 </td>
 
@@ -2495,9 +2500,9 @@ male
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.4013251
+4.40
 
 </td>
 
@@ -2523,7 +2528,7 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
 NA
 
@@ -2551,9 +2556,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-11.2745098
+\-11.275
 
 </td>
 
@@ -2579,9 +2584,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-8.8397790
+8.840
 
 </td>
 
@@ -2607,9 +2612,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.5076142
+0.508
 
 </td>
 
@@ -2635,9 +2640,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-16.1616162
+16.162
 
 </td>
 
@@ -2663,9 +2668,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-8.6956522
+8.696
 
 </td>
 
@@ -2691,9 +2696,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-15.6000000
+15.600
 
 </td>
 
@@ -2719,9 +2724,9 @@ unknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.8408304
+13.841
 
 </td>
 
@@ -2862,49 +2867,49 @@ Model 1, Iteration 1
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -2924,51 +2929,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1475.28514
-
-</td>
-
-<td style="text-align:right;">
-
-0.0856294
+1475.29
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-5.255904
-
-</td>
-
-<td style="text-align:right;">
-
-1468.66330
+0.09
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1475.24093
-
-</td>
-
-<td style="text-align:right;">
-
-1481.9380
+5.26
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3767
+1468.66
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0000872
+1475.24
+
+</td>
+
+<td style="text-align:left;">
+
+1481.94
+
+</td>
+
+<td style="text-align:left;">
+
+3767.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -2982,51 +2987,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-175.23454
-
-</td>
-
-<td style="text-align:right;">
-
-0.1035258
+175.23
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.970298
-
-</td>
-
-<td style="text-align:right;">
-
-166.30404
+0.10
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-175.27301
-
-</td>
-
-<td style="text-align:right;">
-
-184.2323
+6.97
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4533
+166.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995185
+175.27
+
+</td>
+
+<td style="text-align:left;">
+
+184.23
+
+</td>
+
+<td style="text-align:left;">
+
+4533.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3040,51 +3045,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-96.54992
-
-</td>
-
-<td style="text-align:right;">
-
-0.2108575
+96.55
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.579665
-
-</td>
-
-<td style="text-align:right;">
-
-79.08309
+0.21
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-96.45908
-
-</td>
-
-<td style="text-align:right;">
-
-114.0169
+13.58
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4148
+79.08
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0000211
+96.46
+
+</td>
+
+<td style="text-align:left;">
+
+114.02
+
+</td>
+
+<td style="text-align:left;">
+
+4148.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3098,51 +3103,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-549.17926
-
-</td>
-
-<td style="text-align:right;">
-
-0.0331052
+549.18
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.374545
-
-</td>
-
-<td style="text-align:right;">
-
-546.11694
+0.03
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-549.20357
-
-</td>
-
-<td style="text-align:right;">
-
-552.2032
+2.37
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-5145
+546.12
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995601
+549.20
+
+</td>
+
+<td style="text-align:left;">
+
+552.20
+
+</td>
+
+<td style="text-align:left;">
+
+5145.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3156,51 +3161,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.18917
-
-</td>
-
-<td style="text-align:right;">
-
-0.0752473
+1576.19
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.602901
-
-</td>
-
-<td style="text-align:right;">
-
-1570.28463
+0.08
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.15354
-
-</td>
-
-<td style="text-align:right;">
-
-1582.1269
+4.60
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3742
+1570.28
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9996821
+1576.15
+
+</td>
+
+<td style="text-align:left;">
+
+1582.13
+
+</td>
+
+<td style="text-align:left;">
+
+3742.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3214,51 +3219,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212488.96493
-
-</td>
-
-<td style="text-align:right;">
-
-0.0338005
+\-212488.96
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.417476
-
-</td>
-
-<td style="text-align:right;">
-
-\-212490.86645
+0.03
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212488.64969
-
-</td>
-
-<td style="text-align:right;">
-
-\-212487.4985
+1.42
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1759
+\-212490.87
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0012838
+\-212488.65
+
+</td>
+
+<td style="text-align:left;">
+
+\-212487.50
+
+</td>
+
+<td style="text-align:left;">
+
+1759.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3303,49 +3308,49 @@ Model 1, Iteration 2
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -3365,51 +3370,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1416.503669
-
-</td>
-
-<td style="text-align:right;">
-
-0.3122675
+1416.50
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-10.705459
-
-</td>
-
-<td style="text-align:right;">
-
-1402.581989
+0.31
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1416.666888
-
-</td>
-
-<td style="text-align:right;">
-
-1430.13995
+10.71
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1175
+1402.58
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0005621
+1416.67
+
+</td>
+
+<td style="text-align:left;">
+
+1430.14
+
+</td>
+
+<td style="text-align:left;">
+
+1175.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3423,51 +3428,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-177.765268
-
-</td>
-
-<td style="text-align:right;">
-
-0.1122323
+177.77
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.904364
-
-</td>
-
-<td style="text-align:right;">
-
-168.974665
+0.11
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-177.753249
-
-</td>
-
-<td style="text-align:right;">
-
-186.70093
+6.90
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3785
+168.97
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9996791
+177.75
+
+</td>
+
+<td style="text-align:left;">
+
+186.70
+
+</td>
+
+<td style="text-align:left;">
+
+3785.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3481,51 +3486,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-95.480924
-
-</td>
-
-<td style="text-align:right;">
-
-0.2450486
+95.48
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.574825
-
-</td>
-
-<td style="text-align:right;">
-
-78.281753
+0.25
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-95.613012
-
-</td>
-
-<td style="text-align:right;">
-
-112.66700
+13.57
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3069
+78.28
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9999721
+95.61
+
+</td>
+
+<td style="text-align:left;">
+
+112.67
+
+</td>
+
+<td style="text-align:left;">
+
+3069.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3539,51 +3544,51 @@ CalendarYear2013
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-9.963412
-
-</td>
-
-<td style="text-align:right;">
-
-0.3570598
+9.96
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.933475
-
-</td>
-
-<td style="text-align:right;">
-
-\-7.968252
+0.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-9.886253
-
-</td>
-
-<td style="text-align:right;">
-
-28.10716
+13.93
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1523
+\-7.97
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9997908
+9.89
+
+</td>
+
+<td style="text-align:left;">
+
+28.11
+
+</td>
+
+<td style="text-align:left;">
+
+1523.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3597,51 +3602,51 @@ CalendarYear2014
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-14.894387
-
-</td>
-
-<td style="text-align:right;">
-
-0.3559565
+14.89
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.802155
-
-</td>
-
-<td style="text-align:right;">
-
-\-2.881960
+0.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-14.982724
-
-</td>
-
-<td style="text-align:right;">
-
-32.76914
+13.80
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1503
+\-2.88
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0003544
+14.98
+
+</td>
+
+<td style="text-align:left;">
+
+32.77
+
+</td>
+
+<td style="text-align:left;">
+
+1503.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3655,51 +3660,51 @@ CalendarYear2015
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-31.304623
-
-</td>
-
-<td style="text-align:right;">
-
-0.3385334
+31.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.612404
-
-</td>
-
-<td style="text-align:right;">
-
-14.050544
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-31.178339
-
-</td>
-
-<td style="text-align:right;">
-
-48.69293
+13.61
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1617
+14.05
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0003173
+31.18
+
+</td>
+
+<td style="text-align:left;">
+
+48.69
+
+</td>
+
+<td style="text-align:left;">
+
+1617.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3713,51 +3718,51 @@ CalendarYear2016
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-89.503235
-
-</td>
-
-<td style="text-align:right;">
-
-0.3593502
+89.50
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.289309
-
-</td>
-
-<td style="text-align:right;">
-
-72.813192
+0.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-89.505294
-
-</td>
-
-<td style="text-align:right;">
-
-106.73753
+13.29
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1368
+72.81
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0003853
+89.51
+
+</td>
+
+<td style="text-align:left;">
+
+106.74
+
+</td>
+
+<td style="text-align:left;">
+
+1368.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3771,51 +3776,51 @@ CalendarYear2017
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-82.364485
-
-</td>
-
-<td style="text-align:right;">
-
-0.3453372
+82.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.291794
-
-</td>
-
-<td style="text-align:right;">
-
-65.391981
+0.35
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-82.335728
-
-</td>
-
-<td style="text-align:right;">
-
-99.40592
+13.29
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1481
+65.39
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0004040
+82.34
+
+</td>
+
+<td style="text-align:left;">
+
+99.41
+
+</td>
+
+<td style="text-align:left;">
+
+1481.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3829,51 +3834,51 @@ CalendarYear2018
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-83.935744
-
-</td>
-
-<td style="text-align:right;">
-
-0.3408902
+83.94
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.948969
-
-</td>
-
-<td style="text-align:right;">
-
-67.444044
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-83.857761
-
-</td>
-
-<td style="text-align:right;">
-
-100.46264
+12.95
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1443
+67.44
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0004421
+83.86
+
+</td>
+
+<td style="text-align:left;">
+
+100.46
+
+</td>
+
+<td style="text-align:left;">
+
+1443.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3887,51 +3892,51 @@ CalendarYear2019
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-105.589367
-
-</td>
-
-<td style="text-align:right;">
-
-0.3238448
+105.59
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.904214
-
-</td>
-
-<td style="text-align:right;">
-
-89.257047
+0.32
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-105.331844
-
-</td>
-
-<td style="text-align:right;">
-
-122.15940
+12.90
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1588
+89.26
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0004603
+105.33
+
+</td>
+
+<td style="text-align:left;">
+
+122.16
+
+</td>
+
+<td style="text-align:left;">
+
+1588.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -3945,51 +3950,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-547.767424
-
-</td>
-
-<td style="text-align:right;">
-
-0.0355160
+547.77
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.339049
-
-</td>
-
-<td style="text-align:right;">
-
-544.788398
+0.04
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-547.747286
-
-</td>
-
-<td style="text-align:right;">
-
-550.80975
+2.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4337
+544.79
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995529
+547.75
+
+</td>
+
+<td style="text-align:left;">
+
+550.81
+
+</td>
+
+<td style="text-align:left;">
+
+4337.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4003,51 +4008,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.145750
-
-</td>
-
-<td style="text-align:right;">
-
-0.0792738
+1576.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.679392
-
-</td>
-
-<td style="text-align:right;">
-
-1570.161485
+0.08
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.229695
-
-</td>
-
-<td style="text-align:right;">
-
-1582.13064
+4.68
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3484
+1570.16
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995196
+1576.23
+
+</td>
+
+<td style="text-align:left;">
+
+1582.13
+
+</td>
+
+<td style="text-align:left;">
+
+3484.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4061,51 +4066,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212428.267408
-
-</td>
-
-<td style="text-align:right;">
-
-0.0529393
+\-212428.27
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.249289
-
-</td>
-
-<td style="text-align:right;">
-
-\-212431.150226
+0.05
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212427.947795
-
-</td>
-
-<td style="text-align:right;">
-
-\-212425.68249
+2.25
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1805
+\-212431.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0021615
+\-212427.95
+
+</td>
+
+<td style="text-align:left;">
+
+\-212425.68
+
+</td>
+
+<td style="text-align:left;">
+
+1805.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4163,49 +4168,49 @@ Model 1, Iteration 3
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -4225,51 +4230,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-766.539109
-
-</td>
-
-<td style="text-align:right;">
-
-0.3410937
+766.54
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.725332
-
-</td>
-
-<td style="text-align:right;">
-
-749.04916
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-766.533780
-
-</td>
-
-<td style="text-align:right;">
-
-784.311633
+13.73
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1619
+749.05
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0032201
+766.53
+
+</td>
+
+<td style="text-align:left;">
+
+784.31
+
+</td>
+
+<td style="text-align:left;">
+
+1619.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4283,51 +4288,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-139.655327
-
-</td>
-
-<td style="text-align:right;">
-
-0.1037140
+139.66
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.373447
-
-</td>
-
-<td style="text-align:right;">
-
-131.40976
+0.10
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-139.753164
-
-</td>
-
-<td style="text-align:right;">
-
-147.858419
+6.37
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3776
+131.41
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9994107
+139.75
+
+</td>
+
+<td style="text-align:left;">
+
+147.86
+
+</td>
+
+<td style="text-align:left;">
+
+3776.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4341,51 +4346,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-73.674828
-
-</td>
-
-<td style="text-align:right;">
-
-0.2340936
+73.67
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.885118
-
-</td>
-
-<td style="text-align:right;">
-
-57.10076
+0.23
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-73.433869
-
-</td>
-
-<td style="text-align:right;">
-
-90.350705
+12.89
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3030
+57.10
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0000252
+73.43
+
+</td>
+
+<td style="text-align:left;">
+
+90.35
+
+</td>
+
+<td style="text-align:left;">
+
+3030.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4399,51 +4404,51 @@ CalendarYear2013
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-6.593044
-
-</td>
-
-<td style="text-align:right;">
-
-0.3441610
+\-6.59
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.229322
-
-</td>
-
-<td style="text-align:right;">
-
-\-23.27363
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-6.667608
-
-</td>
-
-<td style="text-align:right;">
-
-10.742451
+13.23
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1478
+\-23.27
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0044959
+\-6.67
+
+</td>
+
+<td style="text-align:left;">
+
+10.74
+
+</td>
+
+<td style="text-align:left;">
+
+1478.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4457,51 +4462,51 @@ CalendarYear2014
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-10.019600
-
-</td>
-
-<td style="text-align:right;">
-
-0.3483016
+\-10.02
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.725414
-
-</td>
-
-<td style="text-align:right;">
-
-\-26.86191
+0.35
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-9.632510
-
-</td>
-
-<td style="text-align:right;">
-
-5.934064
+12.73
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1335
+\-26.86
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0035427
+\-9.63
+
+</td>
+
+<td style="text-align:left;">
+
+5.93
+
+</td>
+
+<td style="text-align:left;">
+
+1335.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4515,51 +4520,51 @@ CalendarYear2015
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.303011
-
-</td>
-
-<td style="text-align:right;">
-
-0.3652166
+4.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.962085
-
-</td>
-
-<td style="text-align:right;">
-
-\-12.01563
+0.37
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.146288
-
-</td>
-
-<td style="text-align:right;">
-
-20.880721
+12.96
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1260
+\-12.02
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0061485
+4.15
+
+</td>
+
+<td style="text-align:left;">
+
+20.88
+
+</td>
+
+<td style="text-align:left;">
+
+1260.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.01
 
 </td>
 
@@ -4573,51 +4578,51 @@ CalendarYear2016
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-85.423800
-
-</td>
-
-<td style="text-align:right;">
-
-0.3411489
+85.42
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.604776
-
-</td>
-
-<td style="text-align:right;">
-
-69.09214
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-85.344806
-
-</td>
-
-<td style="text-align:right;">
-
-101.880741
+12.60
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1365
+69.09
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0049854
+85.34
+
+</td>
+
+<td style="text-align:left;">
+
+101.88
+
+</td>
+
+<td style="text-align:left;">
+
+1365.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4631,51 +4636,51 @@ CalendarYear2017
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-103.807019
-
-</td>
-
-<td style="text-align:right;">
-
-0.3418299
+103.81
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.524109
-
-</td>
-
-<td style="text-align:right;">
-
-88.27369
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-103.985504
-
-</td>
-
-<td style="text-align:right;">
-
-119.530880
+12.52
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1342
+88.27
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0056861
+103.99
+
+</td>
+
+<td style="text-align:left;">
+
+119.53
+
+</td>
+
+<td style="text-align:left;">
+
+1342.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.01
 
 </td>
 
@@ -4689,51 +4694,51 @@ CalendarYear2018
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-153.238373
-
-</td>
-
-<td style="text-align:right;">
-
-0.3430763
+153.24
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.455855
-
-</td>
-
-<td style="text-align:right;">
-
-137.15100
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-153.453777
-
-</td>
-
-<td style="text-align:right;">
-
-168.798698
+12.46
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1318
+137.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0043880
+153.45
+
+</td>
+
+<td style="text-align:left;">
+
+168.80
+
+</td>
+
+<td style="text-align:left;">
+
+1318.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4747,51 +4752,51 @@ CalendarYear2019
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-229.734083
-
-</td>
-
-<td style="text-align:right;">
-
-0.3421855
+229.73
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-12.281805
-
-</td>
-
-<td style="text-align:right;">
-
-214.06397
+0.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-230.002244
-
-</td>
-
-<td style="text-align:right;">
-
-245.503511
+12.28
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1288
+214.06
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0049228
+230.00
+
+</td>
+
+<td style="text-align:left;">
+
+245.50
+
+</td>
+
+<td style="text-align:left;">
+
+1288.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4805,51 +4810,51 @@ years
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-100.549452
-
-</td>
-
-<td style="text-align:right;">
-
-0.0172517
+100.55
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.455156
-
-</td>
-
-<td style="text-align:right;">
-
-98.69641
+0.02
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-100.542792
-
-</td>
-
-<td style="text-align:right;">
-
-102.399461
+1.46
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-7115
+98.70
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9994719
+100.54
+
+</td>
+
+<td style="text-align:left;">
+
+102.40
+
+</td>
+
+<td style="text-align:left;">
+
+7115.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4863,51 +4868,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-506.647209
-
-</td>
-
-<td style="text-align:right;">
-
-0.0334121
+506.65
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.132375
-
-</td>
-
-<td style="text-align:right;">
-
-503.90264
+0.03
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-506.621524
-
-</td>
-
-<td style="text-align:right;">
-
-509.385705
+2.13
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4073
+503.90
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9997613
+506.62
+
+</td>
+
+<td style="text-align:left;">
+
+509.39
+
+</td>
+
+<td style="text-align:left;">
+
+4073.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4921,51 +4926,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.154758
-
-</td>
-
-<td style="text-align:right;">
-
-0.0743786
+1576.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.330971
-
-</td>
-
-<td style="text-align:right;">
-
-1570.59813
+0.07
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1576.184663
-
-</td>
-
-<td style="text-align:right;">
-
-1581.798857
+4.33
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3391
+1570.60
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0009972
+1576.18
+
+</td>
+
+<td style="text-align:left;">
+
+1581.80
+
+</td>
+
+<td style="text-align:left;">
+
+3391.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -4979,51 +4984,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-210282.751328
-
-</td>
-
-<td style="text-align:right;">
-
-0.0613233
+\-210282.75
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.529883
-
-</td>
-
-<td style="text-align:right;">
-
-\-210286.01539
+0.06
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-210282.362793
-
-</td>
-
-<td style="text-align:right;">
-
-\-210279.891426
+2.53
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1702
+\-210286.02
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0001921
+\-210282.36
+
+</td>
+
+<td style="text-align:left;">
+
+\-210279.89
+
+</td>
+
+<td style="text-align:left;">
+
+1702.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5072,49 +5077,49 @@ Model 1, LOO analysis of all three iterations
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 elpd\_diff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_diff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 elpd\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_elpd\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 p\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_p\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 looic
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_looic
 
@@ -5134,51 +5139,51 @@ fit3
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.000
-
-</td>
-
-<td style="text-align:right;">
-
-0.00000
+0.00
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-210278.0
-
-</td>
-
-<td style="text-align:right;">
-
-514.7903
+0.00
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-29.42693
-
-</td>
-
-<td style="text-align:right;">
-
-9.086150
+\-210277.96
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-420555.9
+514.79
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1029.5805
+29.43
+
+</td>
+
+<td style="text-align:left;">
+
+9.09
+
+</td>
+
+<td style="text-align:left;">
+
+420555.93
+
+</td>
+
+<td style="text-align:left;">
+
+1029.58
 
 </td>
 
@@ -5192,51 +5197,51 @@ fit2
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-2143.213
-
-</td>
-
-<td style="text-align:right;">
-
-95.63991
+\-2143.21
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212421.2
-
-</td>
-
-<td style="text-align:right;">
-
-438.4778
+95.64
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-23.49342
-
-</td>
-
-<td style="text-align:right;">
-
-6.231303
+\-212421.18
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-424842.4
+438.48
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-876.9556
+23.49
+
+</td>
+
+<td style="text-align:left;">
+
+6.23
+
+</td>
+
+<td style="text-align:left;">
+
+424842.35
+
+</td>
+
+<td style="text-align:left;">
+
+876.96
 
 </td>
 
@@ -5250,51 +5255,51 @@ fit1
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-2207.182
-
-</td>
-
-<td style="text-align:right;">
-
-99.02312
+\-2207.18
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-212485.1
-
-</td>
-
-<td style="text-align:right;">
-
-436.5559
+99.02
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-16.89826
-
-</td>
-
-<td style="text-align:right;">
-
-6.193654
+\-212485.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-424970.3
+436.56
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-873.1117
+16.90
+
+</td>
+
+<td style="text-align:left;">
+
+6.19
+
+</td>
+
+<td style="text-align:left;">
+
+424970.29
+
+</td>
+
+<td style="text-align:left;">
+
+873.11
 
 </td>
 
@@ -5356,49 +5361,49 @@ Model 2, Iteration 1
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -5418,51 +5423,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1662.1365
-
-</td>
-
-<td style="text-align:right;">
-
-0.2970145
+1662.14
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-19.278706
-
-</td>
-
-<td style="text-align:right;">
-
-1637.1794
+0.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1662.2593
-
-</td>
-
-<td style="text-align:right;">
-
-1686.3371
+19.28
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4213
+1637.18
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9999693
+1662.26
+
+</td>
+
+<td style="text-align:left;">
+
+1686.34
+
+</td>
+
+<td style="text-align:left;">
+
+4213.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5476,51 +5481,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-221.0712
-
-</td>
-
-<td style="text-align:right;">
-
-0.3797577
+221.07
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-24.905278
-
-</td>
-
-<td style="text-align:right;">
-
-189.3050
+0.38
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-221.4215
-
-</td>
-
-<td style="text-align:right;">
-
-253.0332
+24.91
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4301
+189.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9997095
+221.42
+
+</td>
+
+<td style="text-align:left;">
+
+253.03
+
+</td>
+
+<td style="text-align:left;">
+
+4301.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5534,51 +5539,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-148.9464
-
-</td>
-
-<td style="text-align:right;">
-
-0.7017531
+148.95
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-46.980354
-
-</td>
-
-<td style="text-align:right;">
-
-89.2368
+0.70
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-149.4444
-
-</td>
-
-<td style="text-align:right;">
-
-209.9223
+46.98
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4482
+89.24
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0001451
+149.44
+
+</td>
+
+<td style="text-align:left;">
+
+209.92
+
+</td>
+
+<td style="text-align:left;">
+
+4482.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5592,51 +5597,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-589.2079
-
-</td>
-
-<td style="text-align:right;">
-
-0.1155348
+589.21
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-8.011870
-
-</td>
-
-<td style="text-align:right;">
-
-579.1430
+0.12
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-589.1435
-
-</td>
-
-<td style="text-align:right;">
-
-599.3674
+8.01
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4809
+579.14
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9999944
+589.14
+
+</td>
+
+<td style="text-align:left;">
+
+599.37
+
+</td>
+
+<td style="text-align:left;">
+
+4809.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5650,51 +5655,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.4510
-
-</td>
-
-<td style="text-align:right;">
-
-0.2498820
+1795.45
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-16.293597
-
-</td>
-
-<td style="text-align:right;">
-
-1774.5283
+0.25
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.2061
-
-</td>
-
-<td style="text-align:right;">
-
-1815.9605
+16.29
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4252
+1774.53
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9997382
+1795.21
+
+</td>
+
+<td style="text-align:left;">
+
+1815.96
+
+</td>
+
+<td style="text-align:left;">
+
+4252.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5708,51 +5713,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-20013.3025
-
-</td>
-
-<td style="text-align:right;">
-
-0.0316670
+\-20013.30
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.414619
-
-</td>
-
-<td style="text-align:right;">
-
-\-20015.1331
+0.03
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-20012.9877
-
-</td>
-
-<td style="text-align:right;">
-
-\-20011.8574
+1.41
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1996
+\-20015.13
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0021312
+\-20012.99
+
+</td>
+
+<td style="text-align:left;">
+
+\-20011.86
+
+</td>
+
+<td style="text-align:left;">
+
+1996.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5803,49 +5808,49 @@ Model 2, Iteration 2
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -5865,51 +5870,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1203.1320
-
-</td>
-
-<td style="text-align:right;">
-
-0.6158485
+1203.13
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-32.361252
-
-</td>
-
-<td style="text-align:right;">
-
-1160.5974
+0.62
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1203.8046
-
-</td>
-
-<td style="text-align:right;">
-
-1244.9585
+32.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2761
+1160.60
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995587
+1203.80
+
+</td>
+
+<td style="text-align:left;">
+
+1244.96
+
+</td>
+
+<td style="text-align:left;">
+
+2761.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5923,51 +5928,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-187.5336
-
-</td>
-
-<td style="text-align:right;">
-
-0.3627648
+187.53
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-22.363968
-
-</td>
-
-<td style="text-align:right;">
-
-158.6576
+0.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-187.2379
-
-</td>
-
-<td style="text-align:right;">
-
-216.5266
+22.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3801
+158.66
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0011465
+187.24
+
+</td>
+
+<td style="text-align:left;">
+
+216.53
+
+</td>
+
+<td style="text-align:left;">
+
+3801.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -5981,51 +5986,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-136.7547
-
-</td>
-
-<td style="text-align:right;">
-
-0.6774024
+136.75
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-42.377405
-
-</td>
-
-<td style="text-align:right;">
-
-83.2324
+0.68
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-136.8076
-
-</td>
-
-<td style="text-align:right;">
-
-190.3354
+42.38
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3914
+83.23
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9991726
+136.81
+
+</td>
+
+<td style="text-align:left;">
+
+190.34
+
+</td>
+
+<td style="text-align:left;">
+
+3914.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6039,51 +6044,51 @@ JobTitleSimpleAssociate Professor
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-285.9145
-
-</td>
-
-<td style="text-align:right;">
-
-0.7507813
+285.91
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-38.108724
-
-</td>
-
-<td style="text-align:right;">
-
-235.3967
+0.75
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-285.8673
-
-</td>
-
-<td style="text-align:right;">
-
-335.0629
+38.11
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2576
+235.40
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0001123
+285.87
+
+</td>
+
+<td style="text-align:left;">
+
+335.06
+
+</td>
+
+<td style="text-align:left;">
+
+2576.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6097,51 +6102,51 @@ JobTitleSimpleProfessor
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-610.7264
-
-</td>
-
-<td style="text-align:right;">
-
-0.6217590
+610.73
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-32.509026
-
-</td>
-
-<td style="text-align:right;">
-
-568.5329
+0.62
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-611.3171
-
-</td>
-
-<td style="text-align:right;">
-
-651.1954
+32.51
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2734
+568.53
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9998759
+611.32
+
+</td>
+
+<td style="text-align:left;">
+
+651.20
+
+</td>
+
+<td style="text-align:left;">
+
+2734.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6155,51 +6160,51 @@ JobTitleSimpleProfessor and Chair
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-882.4052
-
-</td>
-
-<td style="text-align:right;">
-
-1.3217740
+882.41
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-74.406390
-
-</td>
-
-<td style="text-align:right;">
-
-788.1662
+1.32
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-881.6869
-
-</td>
-
-<td style="text-align:right;">
-
-978.3781
+74.41
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3169
+788.17
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9996275
+881.69
+
+</td>
+
+<td style="text-align:left;">
+
+978.38
+
+</td>
+
+<td style="text-align:left;">
+
+3169.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6213,51 +6218,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-543.0634
-
-</td>
-
-<td style="text-align:right;">
-
-0.1237308
+543.06
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-7.652206
-
-</td>
-
-<td style="text-align:right;">
-
-533.3143
+0.12
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-543.0597
-
-</td>
-
-<td style="text-align:right;">
-
-552.9429
+7.65
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3825
+533.31
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9995993
+543.06
+
+</td>
+
+<td style="text-align:left;">
+
+552.94
+
+</td>
+
+<td style="text-align:left;">
+
+3825.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6271,51 +6276,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.3452
-
-</td>
-
-<td style="text-align:right;">
-
-0.2364079
+1795.35
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-15.060967
-
-</td>
-
-<td style="text-align:right;">
-
-1775.8965
+0.24
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.2819
-
-</td>
-
-<td style="text-align:right;">
-
-1815.1689
+15.06
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4059
+1775.90
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9999792
+1795.28
+
+</td>
+
+<td style="text-align:left;">
+
+1815.17
+
+</td>
+
+<td style="text-align:left;">
+
+4059.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6329,51 +6334,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19807.4042
-
-</td>
-
-<td style="text-align:right;">
-
-0.0408905
+\-19807.40
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.823696
-
-</td>
-
-<td style="text-align:right;">
-
-\-19809.8853
+0.04
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19807.0893
-
-</td>
-
-<td style="text-align:right;">
-
-\-19805.3594
+1.82
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1989
+\-19809.89
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0023131
+\-19807.09
+
+</td>
+
+<td style="text-align:left;">
+
+\-19805.36
+
+</td>
+
+<td style="text-align:left;">
+
+1989.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6437,49 +6442,49 @@ Model 2, Iteration 3
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mean
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 mcse
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 sd
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 10%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 50%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 90%
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 n\_eff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 Rhat
 
@@ -6499,51 +6504,51 @@ Rhat
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-899.82274
-
-</td>
-
-<td style="text-align:right;">
-
-0.4637595
+899.82
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-31.386368
-
-</td>
-
-<td style="text-align:right;">
-
-858.90383
+0.46
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-900.11413
-
-</td>
-
-<td style="text-align:right;">
-
-939.40259
+31.39
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4580
+858.90
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9991163
+900.11
+
+</td>
+
+<td style="text-align:left;">
+
+939.40
+
+</td>
+
+<td style="text-align:left;">
+
+4580.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6557,51 +6562,51 @@ gendermale
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-134.83044
-
-</td>
-
-<td style="text-align:right;">
-
-0.3613661
+134.83
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-21.391574
-
-</td>
-
-<td style="text-align:right;">
-
-107.80328
+0.36
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-134.58173
-
-</td>
-
-<td style="text-align:right;">
-
-162.34018
+21.39
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3504
+107.80
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0009762
+134.58
+
+</td>
+
+<td style="text-align:left;">
+
+162.34
+
+</td>
+
+<td style="text-align:left;">
+
+3504.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6615,51 +6620,51 @@ genderunknown
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-142.18715
-
-</td>
-
-<td style="text-align:right;">
-
-0.6402987
+142.19
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-39.598108
-
-</td>
-
-<td style="text-align:right;">
-
-91.72452
+0.64
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-142.29089
-
-</td>
-
-<td style="text-align:right;">
-
-192.75877
+39.60
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3825
+91.72
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0004831
+142.29
+
+</td>
+
+<td style="text-align:left;">
+
+192.76
+
+</td>
+
+<td style="text-align:left;">
+
+3825.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6673,51 +6678,51 @@ JobTitleSimpleAssociate Professor
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-93.96933
-
-</td>
-
-<td style="text-align:right;">
-
-0.8032322
+\-93.97
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-38.893924
-
-</td>
-
-<td style="text-align:right;">
-
-\-143.34427
+0.80
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-93.35127
-
-</td>
-
-<td style="text-align:right;">
-
-\-43.10477
+38.89
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2345
+\-143.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0005233
+\-93.35
+
+</td>
+
+<td style="text-align:left;">
+
+\-43.10
+
+</td>
+
+<td style="text-align:left;">
+
+2345.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6731,51 +6736,51 @@ JobTitleSimpleProfessor
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-232.67422
-
-</td>
-
-<td style="text-align:right;">
-
-0.7218843
+232.67
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-33.921170
-
-</td>
-
-<td style="text-align:right;">
-
-189.31773
+0.72
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-232.41540
-
-</td>
-
-<td style="text-align:right;">
-
-275.71698
+33.92
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2208
+189.32
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0000862
+232.42
+
+</td>
+
+<td style="text-align:left;">
+
+275.72
+
+</td>
+
+<td style="text-align:left;">
+
+2208.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6789,51 +6794,51 @@ JobTitleSimpleProfessor and Chair
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-408.88124
-
-</td>
-
-<td style="text-align:right;">
-
-1.1991779
+408.88
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-67.628235
-
-</td>
-
-<td style="text-align:right;">
-
-323.51002
+1.20
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-407.66021
-
-</td>
-
-<td style="text-align:right;">
-
-496.84548
+67.63
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-3180
+323.51
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0002854
+407.66
+
+</td>
+
+<td style="text-align:left;">
+
+496.85
+
+</td>
+
+<td style="text-align:left;">
+
+3180.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6847,51 +6852,51 @@ years
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-106.72814
-
-</td>
-
-<td style="text-align:right;">
-
-0.0859591
+106.73
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4.543945
-
-</td>
-
-<td style="text-align:right;">
-
-100.92822
+0.09
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-106.74600
-
-</td>
-
-<td style="text-align:right;">
-
-112.58961
+4.54
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2794
+100.93
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0004425
+106.75
+
+</td>
+
+<td style="text-align:left;">
+
+112.59
+
+</td>
+
+<td style="text-align:left;">
+
+2794.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6905,51 +6910,51 @@ sigma
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-493.15414
-
-</td>
-
-<td style="text-align:right;">
-
-0.1055792
+493.15
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.749534
-
-</td>
-
-<td style="text-align:right;">
-
-484.48152
+0.11
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-493.08757
-
-</td>
-
-<td style="text-align:right;">
-
-501.85009
+6.75
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4087
+484.48
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0000214
+493.09
+
+</td>
+
+<td style="text-align:left;">
+
+501.85
+
+</td>
+
+<td style="text-align:left;">
+
+4087.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -6963,51 +6968,51 @@ mean\_PPD
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.33632
-
-</td>
-
-<td style="text-align:right;">
-
-0.2151867
+1795.34
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-13.881867
-
-</td>
-
-<td style="text-align:right;">
-
-1777.87455
+0.22
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1795.53926
-
-</td>
-
-<td style="text-align:right;">
-
-1812.97739
+13.88
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-4162
+1777.87
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.9993625
+1795.54
+
+</td>
+
+<td style="text-align:left;">
+
+1812.98
+
+</td>
+
+<td style="text-align:left;">
+
+4162.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -7021,51 +7026,51 @@ log-posterior
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19560.51393
-
-</td>
-
-<td style="text-align:right;">
-
-0.0456990
+\-19560.51
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-2.000246
-
-</td>
-
-<td style="text-align:right;">
-
-\-19563.21421
+0.05
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19560.15568
-
-</td>
-
-<td style="text-align:right;">
-
-\-19558.27269
+2.00
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1916
+\-19563.21
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-1.0016053
+\-19560.16
+
+</td>
+
+<td style="text-align:left;">
+
+\-19558.27
+
+</td>
+
+<td style="text-align:left;">
+
+1916.00
+
+</td>
+
+<td style="text-align:left;">
+
+1.00
 
 </td>
 
@@ -7158,49 +7163,49 @@ Model 2, LOO analysis of all three iterations
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 elpd\_diff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_diff
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 elpd\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_elpd\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 p\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_p\_loo
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 looic
 
 </th>
 
-<th style="text-align:right;">
+<th style="text-align:left;">
 
 se\_looic
 
@@ -7220,51 +7225,51 @@ fit6
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-0.0000
-
-</td>
-
-<td style="text-align:right;">
-
-0.00000
+0.000
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19549.59
-
-</td>
-
-<td style="text-align:right;">
-
-76.04399
+0.000
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-10.590831
-
-</td>
-
-<td style="text-align:right;">
-
-1.1730731
+\-19549.592
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-39099.18
+76.044
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-152.0880
+10.591
+
+</td>
+
+<td style="text-align:left;">
+
+1.173
+
+</td>
+
+<td style="text-align:left;">
+
+39099.184
+
+</td>
+
+<td style="text-align:left;">
+
+152.088
 
 </td>
 
@@ -7278,51 +7283,51 @@ fit5
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-246.5938
-
-</td>
-
-<td style="text-align:right;">
-
-21.80091
+\-246.594
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-19796.19
-
-</td>
-
-<td style="text-align:right;">
-
-68.35855
+21.801
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-8.596233
-
-</td>
-
-<td style="text-align:right;">
-
-0.8733031
+\-19796.186
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-39592.37
+68.359
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-136.7171
+8.596
+
+</td>
+
+<td style="text-align:left;">
+
+0.873
+
+</td>
+
+<td style="text-align:left;">
+
+39592.372
+
+</td>
+
+<td style="text-align:left;">
+
+136.717
 
 </td>
 
@@ -7336,51 +7341,51 @@ fit4
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-454.2491
-
-</td>
-
-<td style="text-align:right;">
-
-25.91388
+\-454.249
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-\-20003.84
-
-</td>
-
-<td style="text-align:right;">
-
-62.55362
+25.914
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-6.062164
-
-</td>
-
-<td style="text-align:right;">
-
-0.6172564
+\-20003.841
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-40007.68
+62.554
 
 </td>
 
-<td style="text-align:right;">
+<td style="text-align:left;">
 
-125.1072
+6.062
+
+</td>
+
+<td style="text-align:left;">
+
+0.617
+
+</td>
+
+<td style="text-align:left;">
+
+40007.683
+
+</td>
+
+<td style="text-align:left;">
+
+125.107
 
 </td>
 
