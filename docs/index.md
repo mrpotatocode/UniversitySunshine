@@ -1882,12 +1882,6 @@ harder to estimate.
 
 Salaries by Gender (all years, all positions)
 
-<table class="table" style="margin-left: auto; margin-right: auto;">
-
-<caption>
-
-Salaries by Gender (all years, all positions)
-
 </caption>
 
 <thead>
